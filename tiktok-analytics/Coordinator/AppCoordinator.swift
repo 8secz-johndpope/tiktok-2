@@ -26,6 +26,17 @@ class AppCoordinator: NSObject {
     
     func showEmtyNameAlert() {
         let alert = UIAlertController(style: .alert, title: "Alert", message: "Fill username")
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
         navigationController.present(alert, animated: true)
+    }
+    
+    func showVideos() {
+        let viewController = VideosViewController.instantiate(fromAppStoryboard: .analytics)
+        viewController.coordinator = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func pop() {
+        navigationController.popViewController(animated: true)
     }
 }

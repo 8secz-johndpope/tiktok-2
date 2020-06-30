@@ -9,6 +9,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        UIBarButtonItem.setCustomAppearance()
+        UINavigationBar.setCustomAppearance()
+        
         window = UIWindow.init(frame: UIScreen.main.bounds)
         appCoordinator = AppCoordinator(window: window!)
         appCoordinator?.start()

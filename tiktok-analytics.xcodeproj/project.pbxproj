@@ -15,7 +15,7 @@
 		E00C62C724AB3B8E006D3B81 /* PaywallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62C624AB3B8E006D3B81 /* PaywallViewController.swift */; };
 		E00C62C924AB3B9D006D3B81 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62C824AB3B9D006D3B81 /* SearchViewController.swift */; };
 		E00C62CB24AB3BA4006D3B81 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62CA24AB3BA4006D3B81 /* ProfileViewController.swift */; };
-		E00C62CD24AB3BB3006D3B81 /* TopVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62CC24AB3BB3006D3B81 /* TopVideosViewController.swift */; };
+		E00C62CD24AB3BB3006D3B81 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62CC24AB3BB3006D3B81 /* VideosViewController.swift */; };
 		E00C62D024AB3C07006D3B81 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62CF24AB3C07006D3B81 /* AppCoordinator.swift */; };
 		E00C62D324AB3F00006D3B81 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62D224AB3F00006D3B81 /* Network.swift */; };
 		E00C62D524AB4008006D3B81 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62D424AB4008006D3B81 /* Profile.swift */; };
@@ -34,6 +34,11 @@
 		E0D23E3024AB742800CD75B7 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E2F24AB742800CD75B7 /* UIAlertController+Extension.swift */; };
 		E0D23E3224AB744A00CD75B7 /* Device+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E3124AB744900CD75B7 /* Device+Extension.swift */; };
 		E0D23E3424AB94B800CD75B7 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E3324AB94B800CD75B7 /* GradientView.swift */; };
+		E0D23E3624ABA67B00CD75B7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E3524ABA67B00CD75B7 /* Constants.swift */; };
+		E0D23E3824ABA96B00CD75B7 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E3724ABA96B00CD75B7 /* UIBarButtonItem+Extension.swift */; };
+		E0D23E3A24ABA99C00CD75B7 /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E3924ABA99C00CD75B7 /* UINavigationBar+Extension.swift */; };
+		E0D23E3C24ABAA6C00CD75B7 /* UIViewController+BarButtonItemConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E3B24ABAA6C00CD75B7 /* UIViewController+BarButtonItemConfigurable.swift */; };
+		E0D23E3F24ABB0D100CD75B7 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E3E24ABB0D100CD75B7 /* VideoCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +53,7 @@
 		E00C62C624AB3B8E006D3B81 /* PaywallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallViewController.swift; sourceTree = "<group>"; };
 		E00C62C824AB3B9D006D3B81 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E00C62CA24AB3BA4006D3B81 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		E00C62CC24AB3BB3006D3B81 /* TopVideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopVideosViewController.swift; sourceTree = "<group>"; };
+		E00C62CC24AB3BB3006D3B81 /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = "<group>"; };
 		E00C62CF24AB3C07006D3B81 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		E00C62D224AB3F00006D3B81 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		E00C62D424AB4008006D3B81 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -67,6 +72,11 @@
 		E0D23E2F24AB742800CD75B7 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
 		E0D23E3124AB744900CD75B7 /* Device+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Device+Extension.swift"; sourceTree = "<group>"; };
 		E0D23E3324AB94B800CD75B7 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		E0D23E3524ABA67B00CD75B7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E0D23E3724ABA96B00CD75B7 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		E0D23E3924ABA99C00CD75B7 /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
+		E0D23E3B24ABAA6C00CD75B7 /* UIViewController+BarButtonItemConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+BarButtonItemConfigurable.swift"; sourceTree = "<group>"; };
+		E0D23E3E24ABB0D100CD75B7 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
 		F85E30F6BA2852425EEF96C2 /* Pods-tiktok-analytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tiktok-analytics.release.xcconfig"; path = "Target Support Files/Pods-tiktok-analytics/Pods-tiktok-analytics.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,9 +184,10 @@
 		E00C62C324AB3B77006D3B81 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
+				E0D23E3D24ABB0BF00CD75B7 /* VideoCell */,
 				E00C62C824AB3B9D006D3B81 /* SearchViewController.swift */,
 				E00C62CA24AB3BA4006D3B81 /* ProfileViewController.swift */,
-				E00C62CC24AB3BB3006D3B81 /* TopVideosViewController.swift */,
+				E00C62CC24AB3BB3006D3B81 /* VideosViewController.swift */,
 				E0D23E1424AB46D800CD75B7 /* Analytics.storyboard */,
 			);
 			path = Analytics;
@@ -206,6 +217,7 @@
 				E0D23E1724AB471500CD75B7 /* DispatchQueue+Custom.swift */,
 				E0D23E1624AB471500CD75B7 /* Storyboarded.swift */,
 				E0D23E2224AB56D400CD75B7 /* Colors.swift */,
+				E0D23E3524ABA67B00CD75B7 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -216,6 +228,9 @@
 				E0D23E3124AB744900CD75B7 /* Device+Extension.swift */,
 				E0D23E1C24AB476C00CD75B7 /* String+Extension.swift */,
 				E0D23E2F24AB742800CD75B7 /* UIAlertController+Extension.swift */,
+				E0D23E3724ABA96B00CD75B7 /* UIBarButtonItem+Extension.swift */,
+				E0D23E3924ABA99C00CD75B7 /* UINavigationBar+Extension.swift */,
+				E0D23E3B24ABAA6C00CD75B7 /* UIViewController+BarButtonItemConfigurable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -228,6 +243,14 @@
 				E0D23E3324AB94B800CD75B7 /* GradientView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E0D23E3D24ABB0BF00CD75B7 /* VideoCell */ = {
+			isa = PBXGroup;
+			children = (
+				E0D23E3E24ABB0D100CD75B7 /* VideoCollectionViewCell.swift */,
+			);
+			path = VideoCell;
 			sourceTree = "<group>";
 		};
 		F5BBAD47A178E8500F27A4FC /* Pods */ = {
@@ -356,13 +379,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E00C62AB24AB3A8F006D3B81 /* AppDelegate.swift in Sources */,
+				E0D23E3624ABA67B00CD75B7 /* Constants.swift in Sources */,
+				E0D23E3F24ABB0D100CD75B7 /* VideoCollectionViewCell.swift in Sources */,
 				E0D23E3224AB744A00CD75B7 /* Device+Extension.swift in Sources */,
 				E0D23E2C24AB5A4700CD75B7 /* RadialGradientButton.swift in Sources */,
 				E00C62D724AB442B006D3B81 /* NetworkTask.swift in Sources */,
+				E0D23E3A24ABA99C00CD75B7 /* UINavigationBar+Extension.swift in Sources */,
 				E00C62C524AB3B84006D3B81 /* OnboradingViewController.swift in Sources */,
 				E00C62DB24AB453B006D3B81 /* Model.swift in Sources */,
 				E00C62D324AB3F00006D3B81 /* Network.swift in Sources */,
 				E0D23E1824AB471500CD75B7 /* Storyboarded.swift in Sources */,
+				E0D23E3824ABA96B00CD75B7 /* UIBarButtonItem+Extension.swift in Sources */,
 				E0D23E2E24AB5FC700CD75B7 /* HighlightedButton.swift in Sources */,
 				E00C62D924AB4454006D3B81 /* Request.swift in Sources */,
 				E00C62CB24AB3BA4006D3B81 /* ProfileViewController.swift in Sources */,
@@ -370,7 +397,8 @@
 				E00C62C924AB3B9D006D3B81 /* SearchViewController.swift in Sources */,
 				E0D23E2324AB56D400CD75B7 /* Colors.swift in Sources */,
 				E00C62C724AB3B8E006D3B81 /* PaywallViewController.swift in Sources */,
-				E00C62CD24AB3BB3006D3B81 /* TopVideosViewController.swift in Sources */,
+				E00C62CD24AB3BB3006D3B81 /* VideosViewController.swift in Sources */,
+				E0D23E3C24ABAA6C00CD75B7 /* UIViewController+BarButtonItemConfigurable.swift in Sources */,
 				E00C62D524AB4008006D3B81 /* Profile.swift in Sources */,
 				E0D23E1924AB471500CD75B7 /* DispatchQueue+Custom.swift in Sources */,
 				E0D23E3024AB742800CD75B7 /* UIAlertController+Extension.swift in Sources */,

@@ -1,6 +1,6 @@
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, BarButtonItemConfigurable {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var avatarImageView: UIImageView! {
@@ -32,8 +32,26 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.refreshControl = UIRefreshControl()
-        scrollView.refreshControl?.addTarget(self, action: #selector(reload), for: .valueChanged)
+        
+        let control = UIRefreshControl()
+        control.tintColor = .white
+        control.addTarget(self, action: #selector(reload), for: .valueChanged)
+        scrollView.refreshControl = control
+        
+        refreshRightBarButtonItem()
+        refreshLeftBarButtonItem()
+    }
+    
+    var rightBarButtonItemType: RightBarButtonItem {
+        return .exit
+    }
+    
+    var leftBarButtonItemType: LeftBarButtonItem {
+        return .none
+    }
+    
+    override func actionExit() {
+        coordinator?.pop()
     }
     
     @objc private func reload() {
@@ -41,5 +59,9 @@ class ProfileViewController: UIViewController {
             self.scrollView.refreshControl?.endRefreshing()
         }
     }
-
+    
+    @IBAction func actionShowVideos() {
+        coordinator?.showVideos()
+    }
+    
 }
