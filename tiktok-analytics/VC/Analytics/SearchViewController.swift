@@ -79,6 +79,7 @@ extension SearchViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         actionSearch()
+        textField.resignFirstResponder()
         return false
     }
 }

@@ -42,6 +42,7 @@
 		E0D23E4124AC60EB00CD75B7 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E4024AC60EB00CD75B7 /* FilterViewController.swift */; };
 		E0D23E4424AC629000CD75B7 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E4324AC629000CD75B7 /* FilterTableViewCell.swift */; };
 		E0D23E4624AC662900CD75B7 /* UIViewController+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E4524AC662900CD75B7 /* UIViewController+Blur.swift */; };
+		E0D23E4824AC826F00CD75B7 /* VideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0D23E4724AC826F00CD75B7 /* VideoCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		E0D23E4024AC60EB00CD75B7 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		E0D23E4324AC629000CD75B7 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		E0D23E4524AC662900CD75B7 /* UIViewController+Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Blur.swift"; sourceTree = "<group>"; };
+		E0D23E4724AC826F00CD75B7 /* VideoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCollectionViewCell.xib; sourceTree = "<group>"; };
 		F85E30F6BA2852425EEF96C2 /* Pods-tiktok-analytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tiktok-analytics.release.xcconfig"; path = "Target Support Files/Pods-tiktok-analytics/Pods-tiktok-analytics.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -258,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				E0D23E3E24ABB0D100CD75B7 /* VideoCollectionViewCell.swift */,
+				E0D23E4724AC826F00CD75B7 /* VideoCollectionViewCell.xib */,
 			);
 			path = VideoCell;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0D23E4824AC826F00CD75B7 /* VideoCollectionViewCell.xib in Resources */,
 				E00C62B724AB3A90006D3B81 /* LaunchScreen.storyboard in Resources */,
 				E0D23E2124AB47AB00CD75B7 /* Onboarding.storyboard in Resources */,
 				E0D23E1524AB46D800CD75B7 /* Analytics.storyboard in Resources */,

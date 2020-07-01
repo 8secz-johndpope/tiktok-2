@@ -39,7 +39,7 @@ class AppCoordinator: NSObject {
     }
     
     func showVideos() {
-        let viewController = VideosViewController.instantiate(fromAppStoryboard: .analytics)
+        let viewController = VideosViewController()
         viewController.coordinator = self
         navigationController.pushViewController(viewController, animated: true)
     }
