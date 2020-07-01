@@ -39,6 +39,9 @@
 		E0D23E3A24ABA99C00CD75B7 /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E3924ABA99C00CD75B7 /* UINavigationBar+Extension.swift */; };
 		E0D23E3C24ABAA6C00CD75B7 /* UIViewController+BarButtonItemConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E3B24ABAA6C00CD75B7 /* UIViewController+BarButtonItemConfigurable.swift */; };
 		E0D23E3F24ABB0D100CD75B7 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E3E24ABB0D100CD75B7 /* VideoCollectionViewCell.swift */; };
+		E0D23E4124AC60EB00CD75B7 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E4024AC60EB00CD75B7 /* FilterViewController.swift */; };
+		E0D23E4424AC629000CD75B7 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E4324AC629000CD75B7 /* FilterTableViewCell.swift */; };
+		E0D23E4624AC662900CD75B7 /* UIViewController+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E4524AC662900CD75B7 /* UIViewController+Blur.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +80,9 @@
 		E0D23E3924ABA99C00CD75B7 /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
 		E0D23E3B24ABAA6C00CD75B7 /* UIViewController+BarButtonItemConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+BarButtonItemConfigurable.swift"; sourceTree = "<group>"; };
 		E0D23E3E24ABB0D100CD75B7 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
+		E0D23E4024AC60EB00CD75B7 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		E0D23E4324AC629000CD75B7 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
+		E0D23E4524AC662900CD75B7 /* UIViewController+Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Blur.swift"; sourceTree = "<group>"; };
 		F85E30F6BA2852425EEF96C2 /* Pods-tiktok-analytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tiktok-analytics.release.xcconfig"; path = "Target Support Files/Pods-tiktok-analytics/Pods-tiktok-analytics.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,10 +190,12 @@
 		E00C62C324AB3B77006D3B81 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
+				E0D23E4224AC628100CD75B7 /* FilterCell */,
 				E0D23E3D24ABB0BF00CD75B7 /* VideoCell */,
 				E00C62C824AB3B9D006D3B81 /* SearchViewController.swift */,
 				E00C62CA24AB3BA4006D3B81 /* ProfileViewController.swift */,
 				E00C62CC24AB3BB3006D3B81 /* VideosViewController.swift */,
+				E0D23E4024AC60EB00CD75B7 /* FilterViewController.swift */,
 				E0D23E1424AB46D800CD75B7 /* Analytics.storyboard */,
 			);
 			path = Analytics;
@@ -231,6 +239,7 @@
 				E0D23E3724ABA96B00CD75B7 /* UIBarButtonItem+Extension.swift */,
 				E0D23E3924ABA99C00CD75B7 /* UINavigationBar+Extension.swift */,
 				E0D23E3B24ABAA6C00CD75B7 /* UIViewController+BarButtonItemConfigurable.swift */,
+				E0D23E4524AC662900CD75B7 /* UIViewController+Blur.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -251,6 +260,14 @@
 				E0D23E3E24ABB0D100CD75B7 /* VideoCollectionViewCell.swift */,
 			);
 			path = VideoCell;
+			sourceTree = "<group>";
+		};
+		E0D23E4224AC628100CD75B7 /* FilterCell */ = {
+			isa = PBXGroup;
+			children = (
+				E0D23E4324AC629000CD75B7 /* FilterTableViewCell.swift */,
+			);
+			path = FilterCell;
 			sourceTree = "<group>";
 		};
 		F5BBAD47A178E8500F27A4FC /* Pods */ = {
@@ -383,7 +400,9 @@
 				E0D23E3F24ABB0D100CD75B7 /* VideoCollectionViewCell.swift in Sources */,
 				E0D23E3224AB744A00CD75B7 /* Device+Extension.swift in Sources */,
 				E0D23E2C24AB5A4700CD75B7 /* RadialGradientButton.swift in Sources */,
+				E0D23E4424AC629000CD75B7 /* FilterTableViewCell.swift in Sources */,
 				E00C62D724AB442B006D3B81 /* NetworkTask.swift in Sources */,
+				E0D23E4624AC662900CD75B7 /* UIViewController+Blur.swift in Sources */,
 				E0D23E3A24ABA99C00CD75B7 /* UINavigationBar+Extension.swift in Sources */,
 				E00C62C524AB3B84006D3B81 /* OnboradingViewController.swift in Sources */,
 				E00C62DB24AB453B006D3B81 /* Model.swift in Sources */,
@@ -399,6 +418,7 @@
 				E00C62C724AB3B8E006D3B81 /* PaywallViewController.swift in Sources */,
 				E00C62CD24AB3BB3006D3B81 /* VideosViewController.swift in Sources */,
 				E0D23E3C24ABAA6C00CD75B7 /* UIViewController+BarButtonItemConfigurable.swift in Sources */,
+				E0D23E4124AC60EB00CD75B7 /* FilterViewController.swift in Sources */,
 				E00C62D524AB4008006D3B81 /* Profile.swift in Sources */,
 				E0D23E1924AB471500CD75B7 /* DispatchQueue+Custom.swift in Sources */,
 				E0D23E3024AB742800CD75B7 /* UIAlertController+Extension.swift in Sources */,

@@ -6,6 +6,8 @@ class AppCoordinator: NSObject {
     
     var navigationController = UINavigationController()
 
+    private(set) var selectedFilter: Filter = .date
+    
     init(window: UIWindow?) {
         self.window = window
     }
@@ -17,9 +19,9 @@ class AppCoordinator: NSObject {
         window?.rootViewController = navigationController
     }
     
-    func showProfile(name: Profile) {
+    func showProfile(profile: Profile) {
         let viewController = ProfileViewController.instantiate(fromAppStoryboard: .analytics)
-        viewController.profile = Profile()
+        viewController.profile = profile
         viewController.coordinator = self
         navigationController.pushViewController(viewController, animated: true)
     }
@@ -30,10 +32,34 @@ class AppCoordinator: NSObject {
         navigationController.present(alert, animated: true)
     }
     
+    func showErrorAlert(error: String) {
+        let alert = UIAlertController(style: .alert, title: "Alert", message: error)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        navigationController.present(alert, animated: true)
+    }
+    
     func showVideos() {
         let viewController = VideosViewController.instantiate(fromAppStoryboard: .analytics)
         viewController.coordinator = self
         navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func showFilters() {
+        navigationController.viewControllers.last?.addBlurEffect()
+        let viewController = FilterViewController.instantiate(fromAppStoryboard: .analytics)
+        viewController.coordinator = self
+        viewController.modalPresentationStyle = .overCurrentContext
+        viewController.modalTransitionStyle = .crossDissolve
+        navigationController.present(viewController, animated: true)
+    }
+    
+    func filterSelected(_ filter: Filter) {
+        selectedFilter = filter
+        guard let viewController = navigationController.viewControllers.last as? VideosViewController else {
+            return
+        }
+        viewController.removeBlurEffect()
+        viewController.applyFilter(filter)
     }
     
     func pop() {

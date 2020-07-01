@@ -15,7 +15,11 @@ class VideosViewController: UICollectionViewController, BarButtonItemConfigurabl
     }
     
     override func actionSort() {
-        print("sort")
+        coordinator?.showFilters()
+    }
+    
+    func applyFilter(_ filter: Filter) {
+        print(filter)
     }
 
 }

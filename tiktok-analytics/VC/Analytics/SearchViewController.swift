@@ -16,6 +16,11 @@ class SearchViewController: UIViewController {
     }
     @IBOutlet var bottomConstraint: NSLayoutConstraint!
     @IBOutlet var centerYConstraint: NSLayoutConstraint!
+    @IBOutlet weak var loadingLabel: UILabel! {
+        didSet {
+            loadingLabel.isHidden = true
+        }
+    }
     
     var coordinator: AppCoordinator?
     
@@ -27,12 +32,26 @@ class SearchViewController: UIViewController {
     }
     
     @objc private func actionSearch() {
-        guard textField.text?.isEmpty == false else {
+        guard let profile = textField.text, !profile.isEmpty else {
             coordinator?.showEmtyNameAlert()
             return
         }
         
-        coordinator?.showProfile(name: Profile())
+        loadingLabel.isHidden = false
+        searchButton.isUserInteractionEnabled = false
+        textField.isUserInteractionEnabled = false
+        
+        Network.shared.send(Request(path: "users/\(1)")) { (result: Result<Profile, Error>) in
+            switch result {
+            case .success(let profile):
+                self.coordinator?.showProfile(profile: profile)
+            case .failure(let error):
+                self.coordinator?.showErrorAlert(error: error.localizedDescription)
+            }
+            self.loadingLabel.isHidden = true
+            self.searchButton.isUserInteractionEnabled = true
+            self.textField.isUserInteractionEnabled = true
+        }
     }
     
     @objc private func keyboardWillShow(_ notification: Notification) {
