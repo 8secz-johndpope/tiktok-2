@@ -3,7 +3,12 @@ import UIKit
 class VideosViewController: UICollectionViewController, BarButtonItemConfigurable {
 
     var coordinator: AppCoordinator?
-        
+    var profileId = 0
+    
+    private var videos = [Video]()
+    
+    private(set) var selectedFilter: Filter = .date
+    
     var rightBarButtonItemType: RightBarButtonItem {
         return .sort
     }
@@ -37,23 +42,48 @@ class VideosViewController: UICollectionViewController, BarButtonItemConfigurabl
         collectionView.backgroundColor = .clear
         navigationItem.title = "Top Videos"
         refreshRightBarButtonItem()
+        
         collectionView.register(UINib(nibName: "\(VideoCollectionViewCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(VideoCollectionViewCell.self)")
+        let control = UIRefreshControl()
+        control.tintColor = .white
+        control.addTarget(self, action: #selector(loadVideos), for: .valueChanged)
+        collectionView.refreshControl = control
+        
+        loadVideos()
     }
     
     override func actionSort() {
         coordinator?.showFilters()
     }
     
-    func applyFilter(_ filter: Filter) {
-        print(filter)
+    func applyFilter(filter: Filter) {
+        collectionView.refreshControl?.beginRefreshing()
+        selectedFilter = filter
+        loadVideos()
+    }
+    
+    @objc private func loadVideos() {
+        Network.getVideos(userId: profileId, sort: selectedFilter.rawValue) { result in
+            onMain {
+                self.collectionView.refreshControl?.endRefreshing()
+                switch result {
+                case .success(let videos):
+                    self.videos = videos
+                    self.collectionView.reloadData()
+                case .failure(let error):
+                    self.coordinator?.showErrorAlert(error: error.localizedDescription)
+                }
+            }
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return videos.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(VideoCollectionViewCell.self)", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(VideoCollectionViewCell.self)", for: indexPath) as! VideoCollectionViewCell
+        cell.setup(withVideo: videos[indexPath.row])
         return cell
     }
 }

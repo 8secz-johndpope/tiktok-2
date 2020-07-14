@@ -40,17 +40,18 @@ class SearchViewController: UIViewController {
         loadingLabel.isHidden = false
         searchButton.isUserInteractionEnabled = false
         textField.isUserInteractionEnabled = false
-        
-        Network.shared.send(Request(path: "/api/user/\(profile)")) { (result: Result<Profile, Error>) in
-            switch result {
-            case .success(let profile):
-                self.coordinator?.showProfile(profile: profile)
-            case .failure(let error):
-                self.coordinator?.showErrorAlert(error: error.localizedDescription)
+        Network.getUser(user: profile) { result in
+            onMain {
+                switch result {
+                case .success(let profile):
+                    self.coordinator?.showProfile(profile: profile)
+                case .failure(let error):
+                    self.coordinator?.showErrorAlert(error: error.localizedDescription)
+                }
+                self.loadingLabel.isHidden = true
+                self.searchButton.isUserInteractionEnabled = true
+                self.textField.isUserInteractionEnabled = true
             }
-            self.loadingLabel.isHidden = true
-            self.searchButton.isUserInteractionEnabled = true
-            self.textField.isUserInteractionEnabled = true
         }
     }
     

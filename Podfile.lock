@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.2.1)
   - Firebase/Core (6.27.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 6.6.1)
@@ -66,6 +67,9 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.6.0):
     - GoogleUtilities/Logger
+  - Kingfisher (5.14.0):
+    - Kingfisher/Core (= 5.14.0)
+  - Kingfisher/Core (5.14.0)
   - nanopb (1.30905.0):
     - nanopb/decode (= 1.30905.0)
     - nanopb/encode (= 1.30905.0)
@@ -75,12 +79,15 @@ PODS:
   - SwiftyStoreKit (0.15.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.2)
   - Firebase/Core
   - Firebase/Crashlytics
+  - Kingfisher (~> 5.0)
   - SwiftyStoreKit
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -91,11 +98,13 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
+    - Kingfisher
     - nanopb
     - PromisesObjC
     - SwiftyStoreKit
 
 SPEC CHECKSUMS:
+  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
   Firebase: fc4cbf6f1592636431821ef9a3c557e4dfd9f268
   FirebaseAnalytics: 0ea640473474f036cabbc2576e20c2d63671c92f
   FirebaseCore: feda061cb1ee6d8ad4824f4a4a8ffbcfe284f595
@@ -106,10 +115,11 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 9a8a16f79feffc7f42096743de2a7c4815e84020
   GoogleDataTransportCCTSupport: 489c1265d2c85b68187a83a911913d190012158d
   GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
+  Kingfisher: 7b64389a43139c903ec434788344c288217c792d
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
   SwiftyStoreKit: 033d06b6f87955405d3f844a18a7687c2438592a
 
-PODFILE CHECKSUM: fc2cf67ce786bce970fb0413d7be373adf8eee5f
+PODFILE CHECKSUM: fb8fe0943b7e727d5aaca31c569757e7500c8d4b
 
 COCOAPODS: 1.8.0

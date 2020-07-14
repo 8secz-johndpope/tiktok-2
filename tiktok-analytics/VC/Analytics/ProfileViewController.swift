@@ -81,20 +81,22 @@ class ProfileViewController: UIViewController, BarButtonItemConfigurable {
     }
     
     @objc private func reload() {
-        Network.shared.send(Request(path: "/api/user/\(profile.login)")) { (result: Result<Profile, Error>) in
-            self.scrollView.refreshControl?.endRefreshing()
-            switch result {
-            case .success(let profile):
-                self.profile = profile
-                self.setupView()
-            case .failure(let error):
-                self.coordinator?.showErrorAlert(error: error.localizedDescription)
+        Network.getUser(user: profile.login) { result in
+            onMain {
+                self.scrollView.refreshControl?.endRefreshing()
+                switch result {
+                case .success(let profile):
+                    self.profile = profile
+                    self.setupView()
+                case .failure(let error):
+                    self.coordinator?.showErrorAlert(error: error.localizedDescription)
+                }
             }
         }
     }
     
     @IBAction func actionShowVideos() {
-        coordinator?.showVideos()
+        coordinator?.showVideos(profileId: profile.id)
     }
     
 }

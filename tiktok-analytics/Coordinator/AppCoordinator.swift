@@ -5,8 +5,6 @@ class AppCoordinator: NSObject {
     let window: UIWindow?
     
     var navigationController = UINavigationController()
-
-    private(set) var selectedFilter: Filter = .date
     
     init(window: UIWindow?) {
         self.window = window
@@ -38,15 +36,22 @@ class AppCoordinator: NSObject {
         navigationController.present(alert, animated: true)
     }
     
-    func showVideos() {
+    func showVideos(profileId: Int) {
         let viewController = VideosViewController()
         viewController.coordinator = self
+        viewController.profileId = profileId
         navigationController.pushViewController(viewController, animated: true)
     }
     
     func showFilters() {
+        
+        guard let videosViewController = navigationController.viewControllers.last as? VideosViewController else {
+            return
+        }
+        
         navigationController.viewControllers.last?.addBlurEffect()
         let viewController = FilterViewController.instantiate(fromAppStoryboard: .analytics)
+        viewController.filter = videosViewController.selectedFilter
         viewController.coordinator = self
         viewController.modalPresentationStyle = .overCurrentContext
         viewController.modalTransitionStyle = .crossDissolve
@@ -54,12 +59,13 @@ class AppCoordinator: NSObject {
     }
     
     func filterSelected(_ filter: Filter) {
-        selectedFilter = filter
         guard let viewController = navigationController.viewControllers.last as? VideosViewController else {
             return
         }
         viewController.removeBlurEffect()
-        viewController.applyFilter(filter)
+        if viewController.selectedFilter != filter {
+            viewController.applyFilter(filter: filter)
+        }
     }
     
     func pop() {

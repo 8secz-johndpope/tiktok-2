@@ -1,15 +1,16 @@
 import UIKit
 
 enum Filter: String, CaseIterable {
-    case date
-    case views
-    case likes
-    case comments
-    case shares
+    case date = "create_time"
+    case views = "plays"
+    case likes = "likes"
+    case comments = "comments"
+    case shares = "shares"
 }
 
 class FilterViewController: UIViewController {
 
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var containerView: UIView! {
         didSet {
             containerView.layer.cornerRadius = 7.0
@@ -33,25 +34,34 @@ class FilterViewController: UIViewController {
     }
     
     var coordinator: AppCoordinator?
+    var filter: Filter = .date
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTapBehind))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        guard let index = Filter.allCases.firstIndex(of: coordinator!.selectedFilter) else { return }
+        guard let index = Filter.allCases.firstIndex(of: filter) else { return }
         filtersTableView.selectRow(at: IndexPath(row: index, section: 0), animated: false, scrollPosition: .none)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
     }
     
     @objc private func applyFilter() {
         guard let indexPath = filtersTableView.indexPathForSelectedRow else { return }
         dismiss(animated: true)
         coordinator?.filterSelected(Filter.allCases[indexPath.row])
+    }
+    
+    @objc func handleTapBehind(_ sender: UITapGestureRecognizer) {
+        let location: CGPoint = sender.location(in: contentView)
+        guard sender.state == .ended,
+            !contentView.point(inside: location, with: nil) else {
+                return
+        }
+        applyFilter()
     }
 }
 

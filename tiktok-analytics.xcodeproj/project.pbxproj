@@ -19,7 +19,6 @@
 		E00C62D024AB3C07006D3B81 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62CF24AB3C07006D3B81 /* AppCoordinator.swift */; };
 		E00C62D324AB3F00006D3B81 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62D224AB3F00006D3B81 /* Network.swift */; };
 		E00C62D524AB4008006D3B81 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62D424AB4008006D3B81 /* Profile.swift */; };
-		E00C62D724AB442B006D3B81 /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62D624AB442B006D3B81 /* NetworkTask.swift */; };
 		E00C62D924AB4454006D3B81 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62D824AB4454006D3B81 /* Request.swift */; };
 		E00C62DB24AB453B006D3B81 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62DA24AB453B006D3B81 /* Model.swift */; };
 		E0D23E1524AB46D800CD75B7 /* Analytics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0D23E1424AB46D800CD75B7 /* Analytics.storyboard */; };
@@ -43,6 +42,8 @@
 		E0D23E4424AC629000CD75B7 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E4324AC629000CD75B7 /* FilterTableViewCell.swift */; };
 		E0D23E4624AC662900CD75B7 /* UIViewController+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E4524AC662900CD75B7 /* UIViewController+Blur.swift */; };
 		E0D23E4824AC826F00CD75B7 /* VideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0D23E4724AC826F00CD75B7 /* VideoCollectionViewCell.xib */; };
+		E0D23E4B24AC98E200CD75B7 /* DetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0D23E4A24AC98E200CD75B7 /* DetailsView.xib */; };
+		E0D781AF24BDE795007B920A /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D781AE24BDE795007B920A /* Video.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,7 +62,6 @@
 		E00C62CF24AB3C07006D3B81 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		E00C62D224AB3F00006D3B81 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		E00C62D424AB4008006D3B81 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		E00C62D624AB442B006D3B81 /* NetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
 		E00C62D824AB4454006D3B81 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		E00C62DA24AB453B006D3B81 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		E0D23E1424AB46D800CD75B7 /* Analytics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Analytics.storyboard; sourceTree = "<group>"; };
@@ -85,6 +85,8 @@
 		E0D23E4324AC629000CD75B7 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		E0D23E4524AC662900CD75B7 /* UIViewController+Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Blur.swift"; sourceTree = "<group>"; };
 		E0D23E4724AC826F00CD75B7 /* VideoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCollectionViewCell.xib; sourceTree = "<group>"; };
+		E0D23E4A24AC98E200CD75B7 /* DetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsView.xib; sourceTree = "<group>"; };
+		E0D781AE24BDE795007B920A /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		F85E30F6BA2852425EEF96C2 /* Pods-tiktok-analytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tiktok-analytics.release.xcconfig"; path = "Target Support Files/Pods-tiktok-analytics/Pods-tiktok-analytics.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +160,7 @@
 			children = (
 				E00C62DA24AB453B006D3B81 /* Model.swift */,
 				E00C62D424AB4008006D3B81 /* Profile.swift */,
+				E0D781AE24BDE795007B920A /* Video.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 		E00C62C324AB3B77006D3B81 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
+				E0D23E4924AC98D500CD75B7 /* DetailsView */,
 				E0D23E4224AC628100CD75B7 /* FilterCell */,
 				E0D23E3D24ABB0BF00CD75B7 /* VideoCell */,
 				E00C62C824AB3B9D006D3B81 /* SearchViewController.swift */,
@@ -215,7 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				E00C62D224AB3F00006D3B81 /* Network.swift */,
-				E00C62D624AB442B006D3B81 /* NetworkTask.swift */,
 				E00C62D824AB4454006D3B81 /* Request.swift */,
 			);
 			path = Networking;
@@ -271,6 +274,14 @@
 				E0D23E4324AC629000CD75B7 /* FilterTableViewCell.swift */,
 			);
 			path = FilterCell;
+			sourceTree = "<group>";
+		};
+		E0D23E4924AC98D500CD75B7 /* DetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				E0D23E4A24AC98E200CD75B7 /* DetailsView.xib */,
+			);
+			path = DetailsView;
 			sourceTree = "<group>";
 		};
 		F5BBAD47A178E8500F27A4FC /* Pods */ = {
@@ -343,6 +354,7 @@
 			files = (
 				E0D23E4824AC826F00CD75B7 /* VideoCollectionViewCell.xib in Resources */,
 				E00C62B724AB3A90006D3B81 /* LaunchScreen.storyboard in Resources */,
+				E0D23E4B24AC98E200CD75B7 /* DetailsView.xib in Resources */,
 				E0D23E2124AB47AB00CD75B7 /* Onboarding.storyboard in Resources */,
 				E0D23E1524AB46D800CD75B7 /* Analytics.storyboard in Resources */,
 				E00C62B424AB3A90006D3B81 /* Assets.xcassets in Resources */,
@@ -405,7 +417,6 @@
 				E0D23E3224AB744A00CD75B7 /* Device+Extension.swift in Sources */,
 				E0D23E2C24AB5A4700CD75B7 /* RadialGradientButton.swift in Sources */,
 				E0D23E4424AC629000CD75B7 /* FilterTableViewCell.swift in Sources */,
-				E00C62D724AB442B006D3B81 /* NetworkTask.swift in Sources */,
 				E0D23E4624AC662900CD75B7 /* UIViewController+Blur.swift in Sources */,
 				E0D23E3A24ABA99C00CD75B7 /* UINavigationBar+Extension.swift in Sources */,
 				E00C62C524AB3B84006D3B81 /* OnboradingViewController.swift in Sources */,
@@ -418,6 +429,7 @@
 				E00C62CB24AB3BA4006D3B81 /* ProfileViewController.swift in Sources */,
 				E0D23E3424AB94B800CD75B7 /* GradientView.swift in Sources */,
 				E00C62C924AB3B9D006D3B81 /* SearchViewController.swift in Sources */,
+				E0D781AF24BDE795007B920A /* Video.swift in Sources */,
 				E0D23E2324AB56D400CD75B7 /* Colors.swift in Sources */,
 				E00C62C724AB3B8E006D3B81 /* PaywallViewController.swift in Sources */,
 				E00C62CD24AB3BB3006D3B81 /* VideosViewController.swift in Sources */,
