@@ -40,7 +40,15 @@ class Network {
                     // Otherwise, let's try parsing the data
                     do {
                         let decoder = JSONDecoder()
-                        result = .success(try decoder.decode(T.self, from: data))
+                        guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String : Any],
+                            let dataJson = json["data"] as? [String: Any],
+                            let dataUser = try? JSONSerialization.data(withJSONObject: dataJson, options: []),
+                            let user = try? decoder.decode(T.self, from: dataUser) else {
+                                result = .failure(NetworkError.noDataOrError)
+                                completion(result)
+                                return
+                        }
+                        result = .success(user)
                     } catch {
                         result = .failure(error)
                     }

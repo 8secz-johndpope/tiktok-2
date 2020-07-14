@@ -7,20 +7,25 @@ protocol Requestable {
 struct Request: Requestable {
     let path: String
     let method: String
+    let queryItems: [URLQueryItem]
 
-    init(path: String, method: String = "GET") {
+    init(path: String, method: String = "GET", queryItems: [URLQueryItem] = [URLQueryItem(name: "key", value: Constants.apiKey)]) {
         self.path = path
         self.method = method
+        self.queryItems = queryItems
     }
 
     func urlRequest() -> URLRequest {
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com")?.appendingPathComponent(path) else {
-            return URLRequest(url: URL(fileURLWithPath: ""))
-        }
-
-        var urlRequest = URLRequest(url: url)
+        var components = URLComponents()
+        components.host = "18.196.63.23"
+        components.scheme = "http"
+        components.queryItems = []
+        components.path = path
+        components.queryItems = queryItems
+        
+        var urlRequest = URLRequest(url: components.url!)
         urlRequest.httpMethod = method
-
+        
         return urlRequest
     }
 }

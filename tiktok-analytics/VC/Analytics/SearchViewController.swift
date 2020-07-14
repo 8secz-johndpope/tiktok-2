@@ -41,7 +41,7 @@ class SearchViewController: UIViewController {
         searchButton.isUserInteractionEnabled = false
         textField.isUserInteractionEnabled = false
         
-        Network.shared.send(Request(path: "users/\(1)")) { (result: Result<Profile, Error>) in
+        Network.shared.send(Request(path: "/api/user/\(profile)")) { (result: Result<Profile, Error>) in
             switch result {
             case .success(let profile):
                 self.coordinator?.showProfile(profile: profile)
