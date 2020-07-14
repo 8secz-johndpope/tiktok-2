@@ -25,6 +25,11 @@ class ProfileViewController: UIViewController, BarButtonItemConfigurable {
     @IBOutlet weak var heartsTitleLabel: UILabel!
     
     @IBOutlet weak var currentDetailsLabel: UILabel!
+    @IBOutlet weak var detailFollowersCountLabel: UILabel!
+    @IBOutlet weak var detailGainedCountLabel: UILabel!
+    @IBOutlet weak var detailLikesCountLabel: UILabel!
+    @IBOutlet weak var detailLostCountLabel: UILabel!
+    @IBOutlet weak var videosCountLabel: UILabel!
     
     var coordinator: AppCoordinator?
     
@@ -40,6 +45,7 @@ class ProfileViewController: UIViewController, BarButtonItemConfigurable {
         
         refreshRightBarButtonItem()
         refreshLeftBarButtonItem()
+        setupView()
     }
     
     var rightBarButtonItemType: RightBarButtonItem {
@@ -50,13 +56,40 @@ class ProfileViewController: UIViewController, BarButtonItemConfigurable {
         return .none
     }
     
+    private func setupView() {
+        DispatchQueue.global().async {
+            if let data = self.profile.avatarData {
+                onMain {
+                    self.avatarImageView.image = UIImage(data: data)
+                }
+            }
+        }
+        nameLabel.text = "@\(profile.nickname)"
+        bioLabel.text = profile.bio
+        folowingCountLabel.text = profile.following.formatted
+        followersCountLabel.text = profile.followers.formatted
+        heartsCountLabel.text = profile.likes.formatted
+        detailFollowersCountLabel.text = profile.followers.formatted
+        detailGainedCountLabel.text = profile.followers_gained.formatted
+        detailLikesCountLabel.text = profile.likes.formatted
+        detailLostCountLabel.text = profile.followers_lost.formatted
+        videosCountLabel.text = profile.videos.formatted
+    }
+    
     override func actionExit() {
         coordinator?.pop()
     }
     
     @objc private func reload() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        Network.shared.send(Request(path: "/api/user/\(profile.login)")) { (result: Result<Profile, Error>) in
             self.scrollView.refreshControl?.endRefreshing()
+            switch result {
+            case .success(let profile):
+                self.profile = profile
+                self.setupView()
+            case .failure(let error):
+                self.coordinator?.showErrorAlert(error: error.localizedDescription)
+            }
         }
     }
     
