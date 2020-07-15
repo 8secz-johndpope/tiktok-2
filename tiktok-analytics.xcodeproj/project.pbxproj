@@ -44,6 +44,8 @@
 		E0D23E4824AC826F00CD75B7 /* VideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0D23E4724AC826F00CD75B7 /* VideoCollectionViewCell.xib */; };
 		E0D23E4B24AC98E200CD75B7 /* DetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0D23E4A24AC98E200CD75B7 /* DetailsView.xib */; };
 		E0D781AF24BDE795007B920A /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D781AE24BDE795007B920A /* Video.swift */; };
+		E0D781B624BF4FB5007B920A /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D781B524BF4FB5007B920A /* HeaderView.swift */; };
+		E0D781B824BF4FC1007B920A /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0D781B724BF4FC1007B920A /* HeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +89,8 @@
 		E0D23E4724AC826F00CD75B7 /* VideoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCollectionViewCell.xib; sourceTree = "<group>"; };
 		E0D23E4A24AC98E200CD75B7 /* DetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsView.xib; sourceTree = "<group>"; };
 		E0D781AE24BDE795007B920A /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		E0D781B524BF4FB5007B920A /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		E0D781B724BF4FC1007B920A /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		F85E30F6BA2852425EEF96C2 /* Pods-tiktok-analytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tiktok-analytics.release.xcconfig"; path = "Target Support Files/Pods-tiktok-analytics/Pods-tiktok-analytics.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -195,6 +199,7 @@
 		E00C62C324AB3B77006D3B81 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
+				E0D781B424BF4FA4007B920A /* HeaderView */,
 				E0D23E4924AC98D500CD75B7 /* DetailsView */,
 				E0D23E4224AC628100CD75B7 /* FilterCell */,
 				E0D23E3D24ABB0BF00CD75B7 /* VideoCell */,
@@ -284,6 +289,15 @@
 			path = DetailsView;
 			sourceTree = "<group>";
 		};
+		E0D781B424BF4FA4007B920A /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				E0D781B524BF4FB5007B920A /* HeaderView.swift */,
+				E0D781B724BF4FC1007B920A /* HeaderView.xib */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
 		F5BBAD47A178E8500F27A4FC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +369,7 @@
 				E0D23E4824AC826F00CD75B7 /* VideoCollectionViewCell.xib in Resources */,
 				E00C62B724AB3A90006D3B81 /* LaunchScreen.storyboard in Resources */,
 				E0D23E4B24AC98E200CD75B7 /* DetailsView.xib in Resources */,
+				E0D781B824BF4FC1007B920A /* HeaderView.xib in Resources */,
 				E0D23E2124AB47AB00CD75B7 /* Onboarding.storyboard in Resources */,
 				E0D23E1524AB46D800CD75B7 /* Analytics.storyboard in Resources */,
 				E00C62B424AB3A90006D3B81 /* Assets.xcassets in Resources */,
@@ -436,6 +451,7 @@
 				E0D23E3C24ABAA6C00CD75B7 /* UIViewController+BarButtonItemConfigurable.swift in Sources */,
 				E0D23E4124AC60EB00CD75B7 /* FilterViewController.swift in Sources */,
 				E00C62D524AB4008006D3B81 /* Profile.swift in Sources */,
+				E0D781B624BF4FB5007B920A /* HeaderView.swift in Sources */,
 				E0D23E1924AB471500CD75B7 /* DispatchQueue+Custom.swift in Sources */,
 				E0D23E3024AB742800CD75B7 /* UIAlertController+Extension.swift in Sources */,
 				E0D23E1D24AB476C00CD75B7 /* String+Extension.swift in Sources */,

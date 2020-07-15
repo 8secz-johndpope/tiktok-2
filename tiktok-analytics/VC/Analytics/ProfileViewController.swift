@@ -15,15 +15,6 @@ class ProfileViewController: UIViewController, BarButtonItemConfigurable {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var bioLabel: UILabel!
     
-    @IBOutlet weak var folowingCountLabel: UILabel!
-    @IBOutlet weak var folowingTitleLabel: UILabel!
-    
-    @IBOutlet weak var followersCountLabel: UILabel!
-    @IBOutlet weak var followersTitleLabel: UILabel!
-    
-    @IBOutlet weak var heartsCountLabel: UILabel!
-    @IBOutlet weak var heartsTitleLabel: UILabel!
-    
     @IBOutlet weak var currentDetailsLabel: UILabel!
     @IBOutlet weak var detailFollowersCountLabel: UILabel!
     @IBOutlet weak var detailGainedCountLabel: UILabel!
@@ -66,9 +57,7 @@ class ProfileViewController: UIViewController, BarButtonItemConfigurable {
         }
         nameLabel.text = "@\(profile.nickname)"
         bioLabel.text = profile.bio
-        folowingCountLabel.text = profile.following.formatted
-        followersCountLabel.text = profile.followers.formatted
-        heartsCountLabel.text = profile.likes.formatted
+        
         detailFollowersCountLabel.text = profile.followers.formatted
         detailGainedCountLabel.text = profile.followers_gained.formatted
         detailLikesCountLabel.text = profile.likes.formatted
@@ -97,7 +86,7 @@ class ProfileViewController: UIViewController, BarButtonItemConfigurable {
     }
     
     @IBAction func actionShowVideos() {
-        coordinator?.showVideos(profileId: profile.id)
+        coordinator?.showVideos(profile: profile)
     }
     
 }

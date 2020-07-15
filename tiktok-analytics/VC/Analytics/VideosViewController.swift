@@ -1,39 +1,32 @@
 import UIKit
 
-class VideosViewController: UICollectionViewController, BarButtonItemConfigurable {
+class VideosViewController: UIViewController, BarButtonItemConfigurable {
 
+    @IBOutlet weak var infoContainerView: UIView!
+    @IBOutlet weak var collectionView: UICollectionView! {
+        didSet {
+            collectionView.delegate = self
+            collectionView.dataSource = self
+            collectionView.backgroundColor = .clear
+            collectionView.register(UINib(nibName: "\(VideoCollectionViewCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(VideoCollectionViewCell.self)")
+        }
+    }
     var coordinator: AppCoordinator?
-    var profileId = 0
+    var profile: Profile!
     
     private var videos = [Video]()
     
     private(set) var selectedFilter: Filter = .date
     
+    private lazy var headerView: HeaderView = {
+        guard let view = Bundle.main.loadNibNamed("\(HeaderView.self)", owner: nil, options: nil)?.first as? HeaderView else { return HeaderView() }
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .clear
+        return view
+    }()
+    
     var rightBarButtonItemType: RightBarButtonItem {
         return .sort
-    }
-    
-    init() {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = UIDevice.current.isPad ? 40.0 : 25.0
-        let inset: CGFloat = 35.0
-        layout.sectionInset = UIEdgeInsets(top: 0, left: inset, bottom: 0, right: inset)
-        var size = CGSize(width: 135, height: 215)
-        if UIDevice.current.isPad {
-            size = CGSize(width: 235, height: 375)
-        }
-        
-        layout.itemSize = size
-        super.init(collectionViewLayout: layout)
-    }
-    
-    override init(collectionViewLayout layout: UICollectionViewLayout) {
-        super.init(collectionViewLayout: layout)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
@@ -41,14 +34,18 @@ class VideosViewController: UICollectionViewController, BarButtonItemConfigurabl
         view.backgroundColor = Colors.backgroundColor
         navigationItem.title = "Top Videos"
         refreshRightBarButtonItem()
-        collectionView.backgroundColor = .clear
-        collectionView.register(UINib(nibName: "\(VideoCollectionViewCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(VideoCollectionViewCell.self)")
         
         let control = UIRefreshControl()
         control.tintColor = .white
         control.addTarget(self, action: #selector(loadVideos), for: .valueChanged)
         collectionView.refreshControl = control
         
+        infoContainerView.addSubview(headerView)
+        headerView.leftAnchor.constraint(equalTo: infoContainerView.leftAnchor).isActive = true
+        headerView.rightAnchor.constraint(equalTo: infoContainerView.rightAnchor).isActive = true
+        headerView.topAnchor.constraint(equalTo: infoContainerView.topAnchor).isActive = true
+        headerView.bottomAnchor.constraint(equalTo: infoContainerView.bottomAnchor).isActive = true
+        headerView.setup(withProfile: profile)
         loadVideos()
     }
     
@@ -70,7 +67,7 @@ class VideosViewController: UICollectionViewController, BarButtonItemConfigurabl
     }
     
     @objc private func loadVideos() {
-        Network.getVideos(userId: profileId, sort: selectedFilter.rawValue) { result in
+        Network.getVideos(userId: profile.id, sort: selectedFilter.rawValue) { result in
             onMain {
                 self.collectionView.refreshControl?.endRefreshing()
                 switch result {
@@ -83,14 +80,34 @@ class VideosViewController: UICollectionViewController, BarButtonItemConfigurabl
             }
         }
     }
+}
+
+extension VideosViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return videos.count
     }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(VideoCollectionViewCell.self)", for: indexPath) as! VideoCollectionViewCell
         cell.setup(withVideo: videos[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var size = CGSize(width: 135, height: 215)
+        if UIDevice.current.isPad {
+            size = CGSize(width: 235, height: 375)
+        }
+        return size
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return UIDevice.current.isPad ? 40.0 : 25.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let inset: CGFloat = 20.0
+        return UIEdgeInsets(top: 0, left: inset, bottom: 0, right: inset)
     }
 }

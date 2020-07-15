@@ -36,10 +36,10 @@ class AppCoordinator: NSObject {
         navigationController.present(alert, animated: true)
     }
     
-    func showVideos(profileId: Int) {
-        let viewController = VideosViewController()
+    func showVideos(profile: Profile) {
+        let viewController = VideosViewController.instantiate(fromAppStoryboard: .analytics)
         viewController.coordinator = self
-        viewController.profileId = profileId
+        viewController.profile = profile
         navigationController.pushViewController(viewController, animated: true)
     }
     
