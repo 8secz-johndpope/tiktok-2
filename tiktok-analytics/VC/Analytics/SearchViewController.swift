@@ -29,10 +29,16 @@ class SearchViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        guard let savedProfile = UserDefaults.standard.string(forKey: Constants.savedProfile) else {
+            return
+        }
+        textField.text = savedProfile
+        actionSearch()
     }
     
     @objc private func actionSearch() {
-        guard let profile = textField.text, !profile.isEmpty else {
+        guard let text = textField.text, !text.isEmpty else {
             coordinator?.showEmtyNameAlert()
             return
         }
@@ -40,10 +46,11 @@ class SearchViewController: UIViewController {
         loadingLabel.isHidden = false
         searchButton.isUserInteractionEnabled = false
         textField.isUserInteractionEnabled = false
-        Network.getUser(user: profile) { result in
+        Network.getUser(user: text) { result in
             onMain {
                 switch result {
                 case .success(let profile):
+                    UserDefaults.standard.set(text, forKey: Constants.savedProfile)
                     self.coordinator?.showProfile(profile: profile)
                 case .failure(let error):
                     self.coordinator?.showErrorAlert(error: error.localizedDescription)

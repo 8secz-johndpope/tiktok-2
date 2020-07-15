@@ -77,6 +77,7 @@ class ProfileViewController: UIViewController, BarButtonItemConfigurable {
     }
     
     override func actionExit() {
+        UserDefaults.standard.removeObject(forKey: Constants.savedProfile)
         coordinator?.pop()
     }
     

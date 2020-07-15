@@ -35,7 +35,7 @@ extension Int {
             return "\(digits[0])\(digits[1])M"
         case 100000000...999999999:
             return "\(digits[0])\(digits[1])\(digits[2])M"
-        default: return ""
+        default: return "999M+"
         }
     }
     

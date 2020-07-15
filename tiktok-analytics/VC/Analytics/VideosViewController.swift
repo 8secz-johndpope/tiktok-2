@@ -39,11 +39,11 @@ class VideosViewController: UICollectionViewController, BarButtonItemConfigurabl
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Colors.backgroundColor
-        collectionView.backgroundColor = .clear
         navigationItem.title = "Top Videos"
         refreshRightBarButtonItem()
-        
+        collectionView.backgroundColor = .clear
         collectionView.register(UINib(nibName: "\(VideoCollectionViewCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(VideoCollectionViewCell.self)")
+        
         let control = UIRefreshControl()
         control.tintColor = .white
         control.addTarget(self, action: #selector(loadVideos), for: .valueChanged)
@@ -52,12 +52,19 @@ class VideosViewController: UICollectionViewController, BarButtonItemConfigurabl
         loadVideos()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        collectionView.contentOffset = CGPoint(x: 0, y: -collectionView.refreshControl!.frame.height)
+        collectionView.refreshControl?.beginRefreshing()
+    }
+    
     override func actionSort() {
         coordinator?.showFilters()
     }
     
     func applyFilter(filter: Filter) {
         collectionView.refreshControl?.beginRefreshing()
+        collectionView.contentOffset = CGPoint(x: 0, y: -collectionView.refreshControl!.frame.height)
         selectedFilter = filter
         loadVideos()
     }
