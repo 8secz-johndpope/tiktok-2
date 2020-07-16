@@ -9,6 +9,7 @@ class VideosViewController: UIViewController, BarButtonItemConfigurable {
             collectionView.dataSource = self
             collectionView.backgroundColor = .clear
             collectionView.register(UINib(nibName: "\(VideoCollectionViewCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(VideoCollectionViewCell.self)")
+            collectionView.contentInsetAdjustmentBehavior = .never
         }
     }
     var coordinator: AppCoordinator?
@@ -103,7 +104,7 @@ extension VideosViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return UIDevice.current.isPad ? 40.0 : 25.0
+        return 25.0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

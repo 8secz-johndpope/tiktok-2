@@ -37,7 +37,7 @@ class Network {
         }
     }
     
-    class func getVideos(userId: Int, limit: Int = 6, sort: String, _ completion: @escaping (Result<[Video], Error>) -> Void)  {
+    class func getVideos(userId: Int, limit: Int = UIDevice.current.isPad ? 9 : 6, sort: String, _ completion: @escaping (Result<[Video], Error>) -> Void)  {
         let request = ApiRequest.videos(userId: userId, limit: limit, sort: sort)
         AF.request(request.path, parameters: request.params).validate(statusCode: 200..<300).response { response in
             let result: Result<[Video], Error>

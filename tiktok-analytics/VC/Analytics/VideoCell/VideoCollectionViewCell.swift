@@ -11,8 +11,8 @@ class VideoCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        layer.cornerRadius = 21.0
-        layer.masksToBounds = true
+        contentView.layer.cornerRadius = 21.0
+        contentView.layer.masksToBounds = true
     }
     
     func setup(withVideo video: Video) {

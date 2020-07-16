@@ -6,6 +6,16 @@ enum Filter: String, CaseIterable {
     case likes = "likes"
     case comments = "comments"
     case shares = "shares"
+    
+    var title: String {
+        switch self {
+        case .date: return "Date"
+        case .views: return "Views"
+        case .likes: return "Likes"
+        case .comments: return "Comments"
+        case .shares: return "Shares"
+        }
+    }
 }
 
 class FilterViewController: UIViewController {
@@ -73,7 +83,7 @@ extension FilterViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(FilterTableViewCell.self)", for: indexPath) as? FilterTableViewCell else { return UITableViewCell() }
-        cell.titleLabel.text = Filter.allCases[indexPath.row].rawValue
+        cell.titleLabel.text = Filter.allCases[indexPath.row].title
         cell.separatorInset = indexPath.row == Filter.allCases.count - 1 ? UIEdgeInsets(top: 0, left: 0, bottom: 0, right: CGFloat.greatestFiniteMagnitude) :
             UIEdgeInsets(top: 0, left: 30.0, bottom: 0, right: 30.0)
         return cell

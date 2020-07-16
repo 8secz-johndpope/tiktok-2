@@ -18,7 +18,10 @@ class AppCoordinator: NSObject {
     }
     
     func showProfile(profile: Profile) {
-        let viewController = ProfileViewController.instantiate(fromAppStoryboard: .analytics)
+        var viewController = ProfileViewController.instantiate(fromAppStoryboard: .analytics)
+        if UIDevice.current.isPad {
+            viewController = UIStoryboard(name: "Analytics", bundle: .main).instantiateViewController(withIdentifier: "ProfilePadViewController") as! ProfileViewController
+        }
         viewController.profile = profile
         viewController.coordinator = self
         navigationController.pushViewController(viewController, animated: true)
