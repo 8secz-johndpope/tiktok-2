@@ -11,6 +11,20 @@ class AppCoordinator: NSObject {
     }
     
     func start() {
+//        showOnboarding()
+        showSearch()
+    }
+    
+    func showOnboarding() {
+        navigationController.setNavigationBarHidden(true, animated: false)
+        let viewController = OnboradingViewController.instantiate(fromAppStoryboard: .onboarding)
+        viewController.coordinator = self
+        navigationController.viewControllers = [viewController]
+        window?.rootViewController = navigationController
+    }
+    
+    func showSearch() {
+        navigationController.setNavigationBarHidden(false, animated: false)
         let viewController = SearchViewController.instantiate(fromAppStoryboard: .analytics)
         viewController.coordinator = self
         navigationController.viewControllers = [viewController]

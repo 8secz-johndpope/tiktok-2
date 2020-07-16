@@ -34,6 +34,7 @@ class FilterViewController: UIViewController {
             filtersTableView.delegate = self
             filtersTableView.dataSource = self
             filtersTableView.tableFooterView = UIView()
+            filtersTableView.backgroundColor = .white
         }
     }
     

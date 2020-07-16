@@ -7,6 +7,8 @@ class SearchViewController: UIViewController {
             textField.layer.cornerRadius = 15.0
             textField.layer.masksToBounds = true
             textField.delegate = self
+            textField.attributedPlaceholder = NSAttributedString(string: "TikTok Username",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x939393)])
         }
     }
     @IBOutlet weak var searchButton: HighlightedButton! {

@@ -45,6 +45,13 @@
 		E0D781AF24BDE795007B920A /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D781AE24BDE795007B920A /* Video.swift */; };
 		E0D781B624BF4FB5007B920A /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D781B524BF4FB5007B920A /* HeaderView.swift */; };
 		E0D781B824BF4FC1007B920A /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0D781B724BF4FC1007B920A /* HeaderView.xib */; };
+		E0D781C124C09DE7007B920A /* Anal-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E0D781C024C09DE6007B920A /* Anal-2.mp4 */; };
+		E0D781C324C09F4C007B920A /* VideoContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D781C224C09F4C007B920A /* VideoContainerView.swift */; };
+		E0D781C824C0AA4E007B920A /* OnboardingACell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0D781C624C0AA4D007B920A /* OnboardingACell.xib */; };
+		E0D781CC24C0AFEF007B920A /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D781CA24C0AFEF007B920A /* OnboardingCell.swift */; };
+		E0D781CD24C0AFEF007B920A /* OnboardingBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0D781CB24C0AFEF007B920A /* OnboardingBCell.xib */; };
+		E0D781D124C0B4A6007B920A /* OnboardingCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0D781CF24C0B4A6007B920A /* OnboardingCCell.xib */; };
+		E0D781D524C0B749007B920A /* OnboardingDCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0D781D324C0B749007B920A /* OnboardingDCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +96,13 @@
 		E0D781AE24BDE795007B920A /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		E0D781B524BF4FB5007B920A /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		E0D781B724BF4FC1007B920A /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		E0D781C024C09DE6007B920A /* Anal-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Anal-2.mp4"; sourceTree = "<group>"; };
+		E0D781C224C09F4C007B920A /* VideoContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoContainerView.swift; sourceTree = "<group>"; };
+		E0D781C624C0AA4D007B920A /* OnboardingACell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingACell.xib; sourceTree = "<group>"; };
+		E0D781CA24C0AFEF007B920A /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
+		E0D781CB24C0AFEF007B920A /* OnboardingBCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingBCell.xib; sourceTree = "<group>"; };
+		E0D781CF24C0B4A6007B920A /* OnboardingCCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCCell.xib; sourceTree = "<group>"; };
+		E0D781D324C0B749007B920A /* OnboardingDCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingDCell.xib; sourceTree = "<group>"; };
 		F85E30F6BA2852425EEF96C2 /* Pods-tiktok-analytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tiktok-analytics.release.xcconfig"; path = "Target Support Files/Pods-tiktok-analytics/Pods-tiktok-analytics.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +157,7 @@
 				E00C62B324AB3A90006D3B81 /* Assets.xcassets */,
 				E00C62B524AB3A90006D3B81 /* LaunchScreen.storyboard */,
 				E00C62B824AB3A90006D3B81 /* Info.plist */,
+				E0D781C024C09DE6007B920A /* Anal-2.mp4 */,
 			);
 			path = "tiktok-analytics";
 			sourceTree = "<group>";
@@ -179,6 +194,7 @@
 		E00C62C124AB3B5F006D3B81 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				E0D781C924C0AFE0007B920A /* OnboardingCell */,
 				E00C62C424AB3B84006D3B81 /* OnboradingViewController.swift */,
 				E0D23E2024AB47AB00CD75B7 /* Onboarding.storyboard */,
 			);
@@ -257,6 +273,7 @@
 				E0D23E2B24AB5A4700CD75B7 /* RadialGradientButton.swift */,
 				E0D23E2D24AB5FC700CD75B7 /* HighlightedButton.swift */,
 				E0D23E3324AB94B800CD75B7 /* GradientView.swift */,
+				E0D781C224C09F4C007B920A /* VideoContainerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -285,6 +302,18 @@
 				E0D781B724BF4FC1007B920A /* HeaderView.xib */,
 			);
 			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		E0D781C924C0AFE0007B920A /* OnboardingCell */ = {
+			isa = PBXGroup;
+			children = (
+				E0D781CA24C0AFEF007B920A /* OnboardingCell.swift */,
+				E0D781C624C0AA4D007B920A /* OnboardingACell.xib */,
+				E0D781CB24C0AFEF007B920A /* OnboardingBCell.xib */,
+				E0D781CF24C0B4A6007B920A /* OnboardingCCell.xib */,
+				E0D781D324C0B749007B920A /* OnboardingDCell.xib */,
+			);
+			path = OnboardingCell;
 			sourceTree = "<group>";
 		};
 		F5BBAD47A178E8500F27A4FC /* Pods */ = {
@@ -356,9 +385,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0D23E4824AC826F00CD75B7 /* VideoCollectionViewCell.xib in Resources */,
+				E0D781D124C0B4A6007B920A /* OnboardingCCell.xib in Resources */,
 				E00C62B724AB3A90006D3B81 /* LaunchScreen.storyboard in Resources */,
 				E0D781B824BF4FC1007B920A /* HeaderView.xib in Resources */,
 				E0D23E2124AB47AB00CD75B7 /* Onboarding.storyboard in Resources */,
+				E0D781C824C0AA4E007B920A /* OnboardingACell.xib in Resources */,
+				E0D781CD24C0AFEF007B920A /* OnboardingBCell.xib in Resources */,
+				E0D781D524C0B749007B920A /* OnboardingDCell.xib in Resources */,
+				E0D781C124C09DE7007B920A /* Anal-2.mp4 in Resources */,
 				E0D23E1524AB46D800CD75B7 /* Analytics.storyboard in Resources */,
 				E00C62B424AB3A90006D3B81 /* Assets.xcassets in Resources */,
 				E0D23E1F24AB47A300CD75B7 /* Paywall.storyboard in Resources */,
@@ -425,6 +459,8 @@
 				E00C62C524AB3B84006D3B81 /* OnboradingViewController.swift in Sources */,
 				E00C62DB24AB453B006D3B81 /* Model.swift in Sources */,
 				E00C62D324AB3F00006D3B81 /* Network.swift in Sources */,
+				E0D781CC24C0AFEF007B920A /* OnboardingCell.swift in Sources */,
+				E0D781C324C09F4C007B920A /* VideoContainerView.swift in Sources */,
 				E0D23E1824AB471500CD75B7 /* Storyboarded.swift in Sources */,
 				E0D23E3824ABA96B00CD75B7 /* UIBarButtonItem+Extension.swift in Sources */,
 				E0D23E2E24AB5FC700CD75B7 /* HighlightedButton.swift in Sources */,
