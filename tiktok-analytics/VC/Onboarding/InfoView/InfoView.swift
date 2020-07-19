@@ -7,6 +7,9 @@ class InfoView: UIView {
     @IBOutlet weak var bioLabel: UILabel!
     @IBOutlet weak var detailFollowersCountLabel: UILabel!
     @IBOutlet weak var detailGainedCountLabel: UILabel!
+    @IBOutlet weak var detailLikesCountLabel: UILabel!
+    @IBOutlet weak var detailLostCountLabel: UILabel!
+    @IBOutlet weak var videosCountLabel: UILabel!
     @IBOutlet weak var headerContentView: UIView!
     
     var maskLayer: CAShapeLayer!
@@ -51,5 +54,10 @@ class InfoView: UIView {
         detailGainedCountLabel.text = profile.followers_gained.formatted
         addBlur()
         bringSubviewToFront(separatorView)
+        
+        guard UIDevice.current.isPad else { return }
+        detailLikesCountLabel.text = profile.likes.formatted
+        detailLostCountLabel.text = profile.followers_lost.formatted
+        videosCountLabel.text = profile.videos.formatted
     }
 }

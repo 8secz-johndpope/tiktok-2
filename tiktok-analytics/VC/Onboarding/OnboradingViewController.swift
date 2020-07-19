@@ -45,7 +45,12 @@ class OnboradingViewController: UIViewController {
     }()
     
     private lazy var infoView: InfoView = {
-        guard let view = Bundle.main.loadNibNamed("\(InfoView.self)", owner: nil, options: nil)?.first as? InfoView else { return InfoView() }
+        var view: InfoView!
+        if UIDevice.current.isPad {
+            view = Bundle.main.loadNibNamed("\(InfoView.self)", owner: nil, options: nil)?[1] as? InfoView
+        } else {
+            view = Bundle.main.loadNibNamed("\(InfoView.self)", owner: nil, options: nil)?.first as? InfoView
+        }
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
