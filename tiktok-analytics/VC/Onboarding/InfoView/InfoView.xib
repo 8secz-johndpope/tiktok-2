@@ -202,6 +202,7 @@
                 <outlet property="detailGainedCountLabel" destination="f0j-LY-1k8" id="dbY-cv-m7U"/>
                 <outlet property="headerContentView" destination="oLy-F4-sdB" id="IHM-YS-xOx"/>
                 <outlet property="nameLabel" destination="x1S-zP-a9X" id="KJ1-Wz-4Yy"/>
+                <outlet property="separatorView" destination="i2b-Fb-ZMG" id="9TV-cC-tEG"/>
             </connections>
             <point key="canvasLocation" x="138.40579710144928" y="132.58928571428572"/>
         </view>

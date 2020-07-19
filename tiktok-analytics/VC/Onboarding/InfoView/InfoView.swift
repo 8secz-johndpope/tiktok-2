@@ -2,6 +2,7 @@ import UIKit
 
 class InfoView: UIView {
     
+    @IBOutlet weak var separatorView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var bioLabel: UILabel!
     @IBOutlet weak var detailFollowersCountLabel: UILabel!
@@ -30,5 +31,30 @@ class InfoView: UIView {
         bioLabel.text = profile.bio
         detailFollowersCountLabel.text = profile.followers.formatted
         detailGainedCountLabel.text = profile.followers_gained.formatted
+        addBlur()
+    }
+    
+    private func addBlur() {
+        
+        let fake = UIView()
+        addSubview(fake)
+        fake.translatesAutoresizingMaskIntoConstraints = false
+        fake.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        fake.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        fake.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        fake.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        fake.backgroundColor = UIColor.black.withAlphaComponent(0.15)
+        
+        let blurredBackgroundView = UIVisualEffectView()
+        blurredBackgroundView.frame = bounds
+        if #available(iOS 13.0, *) {
+            blurredBackgroundView.effect = UIBlurEffect(style: .dark)
+        } else {
+            blurredBackgroundView.effect = UIBlurEffect(style: .dark)
+        }
+        blurredBackgroundView.alpha = 0.9
+        
+        fake.addSubview(blurredBackgroundView)
+        bringSubviewToFront(separatorView)
     }
 }
