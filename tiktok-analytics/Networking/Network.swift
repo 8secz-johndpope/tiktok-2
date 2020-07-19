@@ -18,11 +18,11 @@ class Network {
         let request = ApiRequest.user(user: user)
         AF.request(request.path, parameters: request.params).validate(statusCode: 200..<300).response { response in
             let result: Result<Profile, Error>
-            
-            
-            let result1: Result<Profile, Error> = .success(Profile(id: 1, login: "login", nickname: "nickname", bio: "bio", avatar: nil, following: 10000, followers: 10000, followers_lost: 100, followers_gained: 100, likes: 10, videos: 3))
-            completion(result1)
-            return
+//            
+//            
+//            let result1: Result<Profile, Error> = .success(Profile(id: 1, login: "login", nickname: "nickname", bio: "bio", avatar: nil, following: 10000, followers: 10000, followers_lost: 100, followers_gained: 100, likes: 10, videos: 3))
+//            completion(result1)
+//            return
             
             switch response.result {
             case .success:

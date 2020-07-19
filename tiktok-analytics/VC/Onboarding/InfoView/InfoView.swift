@@ -9,6 +9,8 @@ class InfoView: UIView {
     @IBOutlet weak var detailGainedCountLabel: UILabel!
     @IBOutlet weak var headerContentView: UIView!
     
+    var maskLayer: CAShapeLayer!
+    
     private lazy var headerView: HeaderView = {
         guard let view = Bundle.main.loadNibNamed("\(HeaderView.self)", owner: nil, options: nil)?.first as? HeaderView else { return HeaderView() }
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -25,6 +27,22 @@ class InfoView: UIView {
         headerView.bottomAnchor.constraint(equalTo: headerContentView.bottomAnchor).isActive = true
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        guard maskLayer == nil else { return }
+        maskLayer = CAShapeLayer()
+        maskLayer.frame = frame
+        let radius: CGFloat = UIDevice.current.isPad ? 80 : 60.0
+        let rect = CGRect(x: 25, y: -radius,
+                          width: 2 * radius, height: 2 * radius)
+        let circlePath = UIBezierPath(ovalIn: rect)
+        let path = UIBezierPath(rect: bounds)
+        path.append(circlePath)
+        maskLayer.fillRule = CAShapeLayerFillRule.evenOdd
+        maskLayer.path = path.cgPath
+        layer.mask = maskLayer
+    }
+    
     func setup(withProfile profile: Profile) {
         headerView.setup(withProfile: profile)
         nameLabel.text = "@\(profile.nickname)"
@@ -32,29 +50,6 @@ class InfoView: UIView {
         detailFollowersCountLabel.text = profile.followers.formatted
         detailGainedCountLabel.text = profile.followers_gained.formatted
         addBlur()
-    }
-    
-    private func addBlur() {
-        
-        let fake = UIView()
-        addSubview(fake)
-        fake.translatesAutoresizingMaskIntoConstraints = false
-        fake.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        fake.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        fake.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        fake.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        fake.backgroundColor = UIColor.black.withAlphaComponent(0.15)
-        
-        let blurredBackgroundView = UIVisualEffectView()
-        blurredBackgroundView.frame = bounds
-        if #available(iOS 13.0, *) {
-            blurredBackgroundView.effect = UIBlurEffect(style: .dark)
-        } else {
-            blurredBackgroundView.effect = UIBlurEffect(style: .dark)
-        }
-        blurredBackgroundView.alpha = 0.9
-        
-        fake.addSubview(blurredBackgroundView)
         bringSubviewToFront(separatorView)
     }
 }
