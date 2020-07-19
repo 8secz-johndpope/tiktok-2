@@ -5,17 +5,13 @@ struct Profile: Model {
     var login: String
     var nickname: String
     var bio: String
-    var avatar: URL
+    var avatar: URL?
     var following: Int
     var followers: Int
     var followers_lost: Int
     var followers_gained: Int
     var likes: Int
     var videos: Int
-    
-    var avatarData: Data? {
-        return try? Data(contentsOf: avatar)
-    }
 }
 
 extension Int {

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="BES-4r-5Hm" customClass="PaywallView" customModule="tiktok_analytics" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lq4-el-2nk">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now You Track all Insides and Boost Your Profile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8o-3E-tva">
+                            <rect key="frame" x="87.666666666666686" y="11.999999999999996" width="200" height="40.666666666666657"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="fkT-hG-a1v"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <mask key="constraints">
+                                    <exclude reference="fkT-hG-a1v"/>
+                                </mask>
+                            </variation>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87Q-l3-hwZ">
+                            <rect key="frame" x="37.666666666666657" y="77.666666666666671" width="300" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="300" id="BbJ-qB-LXD">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="400"/>
+                                </constraint>
+                                <constraint firstAttribute="height" constant="50" id="QUn-0N-hTw">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                </constraint>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <state key="normal" backgroundImage="continue_button">
+                                <string key="title">Start your free 3-day trial
+$49.99/year</string>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFO-l2-bCq">
+                            <rect key="frame" x="29" y="159" width="66" height="23"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
+                            <state key="normal" title="Privacy Policy">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            </variation>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Szp-Pe-PMe">
+                            <rect key="frame" x="286" y="159" width="60" height="23"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
+                            <state key="normal" title="Terms of use">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            </variation>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="df9-Re-BtC">
+                            <rect key="frame" x="77.666666666666686" y="137.66666666666666" width="220" height="25.333333333333343"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="220" id="ANZ-QC-ufS">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="440"/>
+                                </constraint>
+                            </constraints>
+                            <string key="text">This trial automatically renews into a paid subscription and will continue to automatically renew until you cancel. Please see our Privacy Policy and Terms of Use.</string>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="7"/>
+                            <color key="textColor" red="0.53725490200000003" green="0.53725490200000003" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                            </variation>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAI-YM-Jxc">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="2.6666666666666665"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2.5" id="3fI-uO-eZm"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="87Q-l3-hwZ" firstAttribute="centerX" secondItem="Lq4-el-2nk" secondAttribute="centerX" id="3Ng-st-kC4"/>
+                        <constraint firstAttribute="height" constant="200" id="7XO-Ij-xbS">
+                            <variation key="heightClass=regular-widthClass=regular" constant="220"/>
+                        </constraint>
+                        <constraint firstItem="v8o-3E-tva" firstAttribute="centerX" secondItem="Lq4-el-2nk" secondAttribute="centerX" id="8bb-sU-2G0"/>
+                        <constraint firstItem="df9-Re-BtC" firstAttribute="top" secondItem="87Q-l3-hwZ" secondAttribute="bottom" constant="10" id="8sw-3U-Fsz"/>
+                        <constraint firstAttribute="trailing" secondItem="VAI-YM-Jxc" secondAttribute="trailing" id="Bmz-UK-9Kn"/>
+                        <constraint firstItem="v8o-3E-tva" firstAttribute="top" secondItem="Lq4-el-2nk" secondAttribute="top" constant="12" id="ElO-If-cIZ"/>
+                        <constraint firstItem="VAI-YM-Jxc" firstAttribute="leading" secondItem="Lq4-el-2nk" secondAttribute="leading" id="Jqt-hh-Mjy"/>
+                        <constraint firstAttribute="bottom" secondItem="sFO-l2-bCq" secondAttribute="bottom" constant="18" id="cVf-Ra-Ew6"/>
+                        <constraint firstItem="VAI-YM-Jxc" firstAttribute="top" secondItem="Lq4-el-2nk" secondAttribute="top" id="e9S-3K-zx6"/>
+                        <constraint firstAttribute="bottom" secondItem="Szp-Pe-PMe" secondAttribute="bottom" constant="18" id="iie-mj-xga"/>
+                        <constraint firstItem="sFO-l2-bCq" firstAttribute="leading" secondItem="Lq4-el-2nk" secondAttribute="leading" constant="29" id="kYT-sp-CbC">
+                            <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                        </constraint>
+                        <constraint firstItem="df9-Re-BtC" firstAttribute="centerX" secondItem="Lq4-el-2nk" secondAttribute="centerX" id="lwk-px-wT2"/>
+                        <constraint firstAttribute="trailing" secondItem="Szp-Pe-PMe" secondAttribute="trailing" constant="29" id="oil-36-jd9">
+                            <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                        </constraint>
+                        <constraint firstItem="87Q-l3-hwZ" firstAttribute="top" secondItem="v8o-3E-tva" secondAttribute="bottom" constant="25" id="qbm-JA-34T">
+                            <variation key="heightClass=regular-widthClass=regular" constant="33"/>
+                        </constraint>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Lq4-el-2nk" secondAttribute="trailing" id="Ci1-zx-ayf"/>
+                <constraint firstAttribute="bottom" secondItem="Lq4-el-2nk" secondAttribute="bottom" id="UqF-Ju-XMc"/>
+                <constraint firstItem="Lq4-el-2nk" firstAttribute="leading" secondItem="BES-4r-5Hm" secondAttribute="leading" id="Vjz-nw-uYc"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="54" y="-419"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="continue_button" width="299" height="50"/>
+    </resources>
+</document>

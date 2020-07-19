@@ -3,6 +3,8 @@ import UIKit
 class OnboradingViewController: UIViewController {
     
     @IBOutlet weak var videoContainerView: VideoContainerView!
+    
+    @IBOutlet weak var collectionConatinerView: UIView!
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             collectionView.delegate = self
@@ -21,20 +23,66 @@ class OnboradingViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var profileConatainerView: UIView!
+    @IBOutlet weak var premiumContainerView: UIView!
+    
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var avatarImageView: UIImageView! {
+        didSet {
+            avatarImageView.layer.cornerRadius = avatarImageView.bounds.height / 2
+            avatarImageView.layer.borderWidth = 2.0
+            avatarImageView.layer.borderColor = UIColor.white.cgColor
+            avatarImageView.layer.masksToBounds = true
+        }
+    }
+    
+    private lazy var paywallView: PaywallView = {
+        guard let view = Bundle.main.loadNibNamed("\(PaywallView.self)", owner: nil, options: nil)?.first as? PaywallView else { return PaywallView() }
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    private lazy var infoView: InfoView = {
+        guard let view = Bundle.main.loadNibNamed("\(InfoView.self)", owner: nil, options: nil)?.first as? InfoView else { return InfoView() }
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     
     var coordinator: AppCoordinator?
     
-    private var currentPage = 0
+    private var currentPage = 0 {
+        willSet {
+            if newValue == 3 { continueButton.setTitle("Analyse", for: .normal) }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        premiumContainerView.addSubview(paywallView)
+        paywallView.leftAnchor.constraint(equalTo: premiumContainerView.leftAnchor).isActive = true
+        paywallView.topAnchor.constraint(equalTo: premiumContainerView.topAnchor).isActive = true
+        paywallView.rightAnchor.constraint(equalTo: premiumContainerView.rightAnchor).isActive = true
+        paywallView.bottomAnchor.constraint(equalTo: premiumContainerView.bottomAnchor).isActive = true
+        
+        profileConatainerView.addSubview(infoView)
+        infoView.leftAnchor.constraint(equalTo: profileConatainerView.leftAnchor).isActive = true
+        infoView.topAnchor.constraint(equalTo: profileConatainerView.topAnchor).isActive = true
+        infoView.rightAnchor.constraint(equalTo: profileConatainerView.rightAnchor).isActive = true
+        infoView.bottomAnchor.constraint(equalTo: profileConatainerView.bottomAnchor).isActive = true
     }
     
     @objc private func actionNext() {
-        guard currentPage < 4 else { return }
+        if currentPage == 3 {
+            let cell = collectionView.cellForItem(at: IndexPath(row: 3, section: 0)) as! OnboardingDCell
+//            loadProfile(name: cell.textField.text)
+            loadProfile(name: "name")
+            return
+        }
+        
         collectionView.scrollToItem(at: IndexPath(row: currentPage + 1, section: 0),
                                     at: .centeredHorizontally, animated: true)
     }
@@ -54,6 +102,43 @@ class OnboradingViewController: UIViewController {
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
+    }
+    
+    private func loadProfile(name: String?) {
+        
+        guard let name = name, !name.isEmpty,
+            let cell = collectionView.cellForItem(at: IndexPath(row: 3, section: 0)) as? OnboardingDCell else {
+            coordinator?.showEmtyNameAlert()
+            return
+        }
+        
+        cell.loadingLabel.isHidden = false
+        continueButton.isUserInteractionEnabled = false
+        cell.textField.isUserInteractionEnabled = false
+        
+        Network.getUser(user: name) { result in
+            onMain {
+                switch result {
+                case .success(let profile):
+                    UserDefaults.standard.set(name, forKey: Constants.savedProfile)
+                    self.showPremium(profile: profile)
+                case .failure(let error):
+                    self.coordinator?.showErrorAlert(error: error.localizedDescription)
+                }
+                cell.loadingLabel.isHidden = true
+                self.continueButton.isUserInteractionEnabled = true
+                cell.textField.isUserInteractionEnabled = true
+            }
+        }
+    }
+    
+    private func showPremium(profile: Profile) {
+        collectionConatinerView.isHidden = true
+        profileConatainerView.isHidden = false
+        premiumContainerView.isHidden = false
+        avatarImageView.isHidden = false
+        infoView.setup(withProfile: profile)
+        avatarImageView.kf.setImage(with: profile.avatar)
     }
 }
 
@@ -84,9 +169,8 @@ extension OnboradingViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let center = CGPoint(x: scrollView.contentOffset.x + (scrollView.frame.width / 2), y: (scrollView.frame.height / 2))
-        if let indexPath = collectionView.indexPathForItem(at: center) {
-            currentPage = indexPath.row
-        }
+        guard let indexPath = collectionView.indexPathForItem(at: center) else { return }
+        currentPage = indexPath.row
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

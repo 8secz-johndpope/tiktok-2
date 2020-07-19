@@ -21,6 +21,10 @@
 		E00C62D524AB4008006D3B81 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62D424AB4008006D3B81 /* Profile.swift */; };
 		E00C62D924AB4454006D3B81 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62D824AB4454006D3B81 /* Request.swift */; };
 		E00C62DB24AB453B006D3B81 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62DA24AB453B006D3B81 /* Model.swift */; };
+		E0436B3524C4695B00B5EB81 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0436B3324C4695B00B5EB81 /* PaywallView.swift */; };
+		E0436B3624C4695B00B5EB81 /* PaywallView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0436B3424C4695B00B5EB81 /* PaywallView.xib */; };
+		E0436B3924C4709500B5EB81 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0436B3824C4709500B5EB81 /* InfoView.swift */; };
+		E0436B3B24C4709C00B5EB81 /* InfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0436B3A24C4709C00B5EB81 /* InfoView.xib */; };
 		E0D23E1524AB46D800CD75B7 /* Analytics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0D23E1424AB46D800CD75B7 /* Analytics.storyboard */; };
 		E0D23E1824AB471500CD75B7 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E1624AB471500CD75B7 /* Storyboarded.swift */; };
 		E0D23E1924AB471500CD75B7 /* DispatchQueue+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E1724AB471500CD75B7 /* DispatchQueue+Custom.swift */; };
@@ -72,6 +76,10 @@
 		E00C62D424AB4008006D3B81 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		E00C62D824AB4454006D3B81 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		E00C62DA24AB453B006D3B81 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		E0436B3324C4695B00B5EB81 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		E0436B3424C4695B00B5EB81 /* PaywallView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaywallView.xib; sourceTree = "<group>"; };
+		E0436B3824C4709500B5EB81 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		E0436B3A24C4709C00B5EB81 /* InfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoView.xib; sourceTree = "<group>"; };
 		E0D23E1424AB46D800CD75B7 /* Analytics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Analytics.storyboard; sourceTree = "<group>"; };
 		E0D23E1624AB471500CD75B7 /* Storyboarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		E0D23E1724AB471500CD75B7 /* DispatchQueue+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Custom.swift"; sourceTree = "<group>"; };
@@ -194,6 +202,8 @@
 		E00C62C124AB3B5F006D3B81 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				E0436B3724C4708800B5EB81 /* InfoView */,
+				E0436B3224C4694300B5EB81 /* PaywallView */,
 				E0D781C924C0AFE0007B920A /* OnboardingCell */,
 				E00C62C424AB3B84006D3B81 /* OnboradingViewController.swift */,
 				E0D23E2024AB47AB00CD75B7 /* Onboarding.storyboard */,
@@ -240,6 +250,24 @@
 				E00C62D824AB4454006D3B81 /* Request.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		E0436B3224C4694300B5EB81 /* PaywallView */ = {
+			isa = PBXGroup;
+			children = (
+				E0436B3324C4695B00B5EB81 /* PaywallView.swift */,
+				E0436B3424C4695B00B5EB81 /* PaywallView.xib */,
+			);
+			path = PaywallView;
+			sourceTree = "<group>";
+		};
+		E0436B3724C4708800B5EB81 /* InfoView */ = {
+			isa = PBXGroup;
+			children = (
+				E0436B3824C4709500B5EB81 /* InfoView.swift */,
+				E0436B3A24C4709C00B5EB81 /* InfoView.xib */,
+			);
+			path = InfoView;
 			sourceTree = "<group>";
 		};
 		E0D23E1A24AB475900CD75B7 /* Utils */ = {
@@ -386,6 +414,7 @@
 			files = (
 				E0D23E4824AC826F00CD75B7 /* VideoCollectionViewCell.xib in Resources */,
 				E0D781D124C0B4A6007B920A /* OnboardingCCell.xib in Resources */,
+				E0436B3624C4695B00B5EB81 /* PaywallView.xib in Resources */,
 				E00C62B724AB3A90006D3B81 /* LaunchScreen.storyboard in Resources */,
 				E0D781B824BF4FC1007B920A /* HeaderView.xib in Resources */,
 				E0D23E2124AB47AB00CD75B7 /* Onboarding.storyboard in Resources */,
@@ -393,6 +422,7 @@
 				E0D781CD24C0AFEF007B920A /* OnboardingBCell.xib in Resources */,
 				E0D781D524C0B749007B920A /* OnboardingDCell.xib in Resources */,
 				E0D781C124C09DE7007B920A /* Anal-2.mp4 in Resources */,
+				E0436B3B24C4709C00B5EB81 /* InfoView.xib in Resources */,
 				E0D23E1524AB46D800CD75B7 /* Analytics.storyboard in Resources */,
 				E00C62B424AB3A90006D3B81 /* Assets.xcassets in Resources */,
 				E0D23E1F24AB47A300CD75B7 /* Paywall.storyboard in Resources */,
@@ -452,7 +482,9 @@
 				E0D23E3624ABA67B00CD75B7 /* Constants.swift in Sources */,
 				E0D23E3F24ABB0D100CD75B7 /* VideoCollectionViewCell.swift in Sources */,
 				E0D23E3224AB744A00CD75B7 /* Device+Extension.swift in Sources */,
+				E0436B3924C4709500B5EB81 /* InfoView.swift in Sources */,
 				E0D23E2C24AB5A4700CD75B7 /* RadialGradientButton.swift in Sources */,
+				E0436B3524C4695B00B5EB81 /* PaywallView.swift in Sources */,
 				E0D23E4424AC629000CD75B7 /* FilterTableViewCell.swift in Sources */,
 				E0D23E4624AC662900CD75B7 /* UIViewController+Blur.swift in Sources */,
 				E0D23E3A24ABA99C00CD75B7 /* UINavigationBar+Extension.swift in Sources */,

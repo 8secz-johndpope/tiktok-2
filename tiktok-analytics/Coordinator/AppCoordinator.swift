@@ -11,8 +11,8 @@ class AppCoordinator: NSObject {
     }
     
     func start() {
-//        showOnboarding()
-        showSearch()
+        showOnboarding()
+//        showSearch()
     }
     
     func showOnboarding() {

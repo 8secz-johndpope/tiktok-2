@@ -1,4 +1,5 @@
 import UIKit
+import Kingfisher
 
 class ProfileViewController: UIViewController, BarButtonItemConfigurable {
     
@@ -76,13 +77,7 @@ class ProfileViewController: UIViewController, BarButtonItemConfigurable {
     }
     
     private func setupView() {
-        DispatchQueue.global().async {
-            if let data = self.profile.avatarData {
-                onMain {
-                    self.avatarImageView.image = UIImage(data: data)
-                }
-            }
-        }
+        avatarImageView.kf.setImage(with: profile.avatar)
         nameLabel.text = "@\(profile.nickname)"
         bioLabel.text = profile.bio
         

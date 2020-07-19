@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -33,6 +33,12 @@
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile is loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dri-5D-bxN">
+                                <rect key="frame" x="141" y="54" width="93" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TikTok" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B9d-wK-gG7">
                                 <rect key="frame" x="37.5" y="87" width="300" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -51,10 +57,13 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Dri-5D-bxN" firstAttribute="top" secondItem="NZp-sz-5rG" secondAttribute="bottom" id="D7L-qs-ZVg"/>
                             <constraint firstItem="B9d-wK-gG7" firstAttribute="centerX" secondItem="ArP-gW-SkZ" secondAttribute="centerX" id="HPe-hD-e7Q"/>
+                            <constraint firstItem="Dri-5D-bxN" firstAttribute="centerX" secondItem="ArP-gW-SkZ" secondAttribute="centerX" id="Ich-sn-kAP"/>
                             <constraint firstItem="NZp-sz-5rG" firstAttribute="top" secondItem="ArP-gW-SkZ" secondAttribute="top" constant="33" id="OFP-c1-Wqh">
                                 <variation key="heightClass=regular-widthClass=regular" constant="26"/>
                             </constraint>
+                            <constraint firstItem="B9d-wK-gG7" firstAttribute="top" secondItem="Dri-5D-bxN" secondAttribute="bottom" id="Sya-xh-Cs9"/>
                             <constraint firstItem="B9d-wK-gG7" firstAttribute="top" secondItem="NZp-sz-5rG" secondAttribute="bottom" constant="33" id="VTa-KJ-yM2">
                                 <variation key="heightClass=regular-widthClass=regular" constant="62"/>
                             </constraint>
@@ -70,6 +79,7 @@
                 <constraint firstItem="ArP-gW-SkZ" firstAttribute="leading" secondItem="Zpo-EE-A1d" secondAttribute="leading" id="sql-NH-9N9"/>
             </constraints>
             <connections>
+                <outlet property="loadingLabel" destination="Dri-5D-bxN" id="DJw-ba-Nxc"/>
                 <outlet property="textField" destination="B9d-wK-gG7" id="x89-1c-N19"/>
             </connections>
             <point key="canvasLocation" x="138.40579710144928" y="152.67857142857142"/>

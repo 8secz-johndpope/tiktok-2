@@ -69,6 +69,13 @@ class OnboardingCCell: UICollectionViewCell {
 }
 
 class OnboardingDCell: UICollectionViewCell {
+    
+    @IBOutlet weak var loadingLabel: UILabel! {
+        didSet {
+            loadingLabel.isHidden = true
+        }
+    }
+    
     @IBOutlet weak var textField: UITextField! {
         didSet {
             textField.layer.cornerRadius = textField.bounds.height / 2
