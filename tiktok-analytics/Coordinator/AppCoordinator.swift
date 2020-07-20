@@ -1,4 +1,5 @@
 import UIKit
+import SafariServices
 
 class AppCoordinator: NSObject {
 
@@ -87,5 +88,15 @@ class AppCoordinator: NSObject {
     
     func pop() {
         navigationController.popViewController(animated: true)
+    }
+    
+    func showPrivacy() {
+        let viewController = SFSafariViewController(url: Constants.privacy)
+        navigationController.present(viewController, animated: true)
+    }
+    
+    func showTerms() {
+        let viewController = SFSafariViewController(url: Constants.terms)
+        navigationController.present(viewController, animated: true)
     }
 }

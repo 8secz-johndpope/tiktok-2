@@ -10,4 +10,8 @@ struct Constants {
     static let apiUrl = "http://18.196.63.23/api"
     static let savedProfile = "savedProfile"
     static let onboardingPassed = "onboardingPassed"
+    static let privacy = URL(string: "https://google.com")!
+    static let terms = URL(string: "https://google.com")!
+    static let productId = "com.ticanalytics.followersapp"
+    static let productPrice = "productPrice"
 }

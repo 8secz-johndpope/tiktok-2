@@ -1,5 +1,4 @@
 import UIKit
-import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -9,6 +8,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        PurchaseHelper.getProductsInfo()
+        PurchaseHelper.completeIAPTransactions()
         UIBarButtonItem.setCustomAppearance()
         UINavigationBar.setCustomAppearance()
         
@@ -16,8 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appCoordinator = AppCoordinator(window: window!)
         appCoordinator?.start()
         window?.makeKeyAndVisible()
-        
-//        FirebaseApp.configure()
         
         return true
     }

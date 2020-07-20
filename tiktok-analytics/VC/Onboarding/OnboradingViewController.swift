@@ -41,6 +41,7 @@ class OnboradingViewController: UIViewController {
     private lazy var paywallView: PaywallView = {
         guard let view = Bundle.main.loadNibNamed("\(PaywallView.self)", owner: nil, options: nil)?.first as? PaywallView else { return PaywallView() }
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.delegate = self
         return view
     }()
     
@@ -84,8 +85,7 @@ class OnboradingViewController: UIViewController {
     @objc private func actionNext() {
         if currentPage == 3 {
             let cell = collectionView.cellForItem(at: IndexPath(row: 3, section: 0)) as! OnboardingDCell
-//            loadProfile(name: cell.textField.text)
-            loadProfile(name: "katetyga")
+            loadProfile(name: cell.textField.text)
             return
         }
         
@@ -139,6 +139,7 @@ class OnboradingViewController: UIViewController {
     }
     
     private func showPremium(profile: Profile) {
+        paywallView.setup()
         collectionConatinerView.isHidden = true
         profileConatainerView.isHidden = false
         premiumContainerView.isHidden = false
@@ -201,5 +202,20 @@ extension OnboradingViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false
+    }
+}
+
+extension OnboradingViewController: PaywallViewDelegate {
+    
+    func showPrivacy() {
+        coordinator?.showPrivacy()
+    }
+    
+    func showTerms() {
+        coordinator?.showTerms()
+    }
+    
+    func purchase() {
+        
     }
 }

@@ -46,6 +46,9 @@
                                 <string key="title">Start your free 3-day trial
 $49.99/year</string>
                             </state>
+                            <connections>
+                                <action selector="actionPurchase" destination="BES-4r-5Hm" eventType="touchUpInside" id="Lrl-D6-luL"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFO-l2-bCq">
                             <rect key="frame" x="29" y="159" width="66" height="23"/>
@@ -56,6 +59,9 @@ $49.99/year</string>
                             <variation key="heightClass=regular-widthClass=regular">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                             </variation>
+                            <connections>
+                                <action selector="actionPrivacy" destination="BES-4r-5Hm" eventType="touchUpInside" id="Dbg-cL-3wM"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Szp-Pe-PMe">
                             <rect key="frame" x="286" y="159" width="60" height="23"/>
@@ -66,6 +72,9 @@ $49.99/year</string>
                             <variation key="heightClass=regular-widthClass=regular">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                             </variation>
+                            <connections>
+                                <action selector="actionTerms" destination="BES-4r-5Hm" eventType="touchUpInside" id="Ydi-wY-at2"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="df9-Re-BtC">
                             <rect key="frame" x="77.666666666666686" y="137.66666666666666" width="220" height="25.333333333333343"/>
@@ -126,6 +135,11 @@ $49.99/year</string>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="privacyButton" destination="sFO-l2-bCq" id="oE0-rc-c9t"/>
+                <outlet property="purchaseButton" destination="87Q-l3-hwZ" id="iNx-oF-oc2"/>
+                <outlet property="termsButton" destination="Szp-Pe-PMe" id="9MC-YT-THZ"/>
+            </connections>
             <point key="canvasLocation" x="54" y="-419"/>
         </view>
     </objects>
