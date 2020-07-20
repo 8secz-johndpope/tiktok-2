@@ -1,7 +1,7 @@
 import UIKit
 
 extension UIView {
-    func addBlur(style: UIBlurEffect.Style = .regular, alpha: CGFloat = 0.8) {
+    func addBlur(style: UIBlurEffect.Style = .dark, alpha: CGFloat = 0.7) {
         let blurView = UIVisualEffectView()
         addSubview(blurView)
         blurView.translatesAutoresizingMaskIntoConstraints = false

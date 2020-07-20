@@ -5,6 +5,7 @@ enum AppStoryboard: String {
     case onboarding
     case paywall
     case analytics
+    case splash
     
     var instance: UIStoryboard {
 

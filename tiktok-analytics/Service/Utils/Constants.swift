@@ -14,4 +14,5 @@ struct Constants {
     static let terms = URL(string: "https://google.com")!
     static let productId = "com.ticanalytics.followersapp"
     static let productPrice = "productPrice"
+    static let sharedSecret = ""
 }

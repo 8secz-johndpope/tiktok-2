@@ -26,15 +26,44 @@ class PurchaseHelper {
         }
     }
     
-    func purchase(_ completion: @escaping (UIAlertController?) -> Void) {
+    func purchase(_ completion: @escaping (Bool, UIAlertController?) -> Void) {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+//            completion(true, self.alertWithTitle("Thank You", message: "Purchase completed", handler: nil))
+//        }
+//        return
+            
         SwiftyStoreKit.purchaseProduct(Constants.productPrice, atomically: true) { result in
             switch result {
             case .success(let purchase):
                 if purchase.needsFinishTransaction {
                     SwiftyStoreKit.finishTransaction(purchase.transaction)
                 }
+                self.checkSubscription { purchased in
+                    completion(purchased, self.alertForPurchaseResult(result, handler: nil))
+                }
             case .error:
-                completion(self.alertForPurchaseResult(result, handler: nil))
+                completion(false, self.alertForPurchaseResult(result, handler: nil))
+            }
+        }
+    }
+    
+    func checkSubscription(_ completion: @escaping (Bool) -> Void) {
+        let appleValidator = AppleReceiptValidator(service: .production, sharedSecret: Constants.sharedSecret)
+        SwiftyStoreKit.verifyReceipt(using: appleValidator) { result in
+            switch result {
+                case .success(let receipt):
+                let purchaseResult = SwiftyStoreKit.verifySubscription(ofType: .autoRenewable, productId: Constants.productId, inReceipt: receipt)
+                switch purchaseResult {
+                case .purchased(let expiryDate, _):
+                    completion(expiryDate > Date())
+                case .expired:
+                    completion(false)
+                case .notPurchased:
+                    completion(false)
+                }
+            case .error(let error):
+                completion(false)
+                print("Receipt verification failed: \(error)")
             }
         }
     }

@@ -22,4 +22,20 @@ extension UIViewController {
             subview.removeFromSuperview()
         }
     }
+    
+    func add(_ child: UIViewController) {
+        view.addSubview(child.view)
+        addChild(child)
+        child.didMove(toParent: self)
+    }
+
+    func remove() {
+        guard parent != nil else {
+            return
+        }
+        
+        willMove(toParent: nil)
+        view.removeFromSuperview()
+        removeFromParent()
+    }
 }

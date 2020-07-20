@@ -8,8 +8,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        PurchaseHelper.getProductsInfo()
-        PurchaseHelper.completeIAPTransactions()
+        PurchaseHelper.shared.getProductsInfo()
+        PurchaseHelper.shared.completeIAPTransactions()
         UIBarButtonItem.setCustomAppearance()
         UINavigationBar.setCustomAppearance()
         

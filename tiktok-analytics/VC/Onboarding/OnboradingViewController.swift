@@ -56,6 +56,14 @@ class OnboradingViewController: UIViewController {
         return view
     }()
     
+    private lazy var spinnerViewController: SpinnerViewController = {
+        let viewController = SpinnerViewController()
+        viewController.view.translatesAutoresizingMaskIntoConstraints = false
+        viewController.view.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
+        viewController.view.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height).isActive = true
+        return viewController
+    }()
+    
     var coordinator: AppCoordinator?
     
     private var currentPage = 0 {
@@ -216,6 +224,17 @@ extension OnboradingViewController: PaywallViewDelegate {
     }
     
     func purchase() {
-        
+        add(spinnerViewController)
+        PurchaseHelper.shared.purchase { purchased, alert in
+            onMain {
+                self.spinnerViewController.remove()
+                if let alert = alert {
+                    self.present(alert, animated: true)
+                }
+                if purchased {
+                    self.coordinator?.showSearch()
+                }
+            }
+        }
     }
 }

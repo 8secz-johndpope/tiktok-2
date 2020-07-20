@@ -12,12 +12,26 @@ class AppCoordinator: NSObject {
     }
     
     func start() {
-        showOnboarding()
-//        showSearch()
+        showLoad()
+        PurchaseHelper.shared.checkSubscription { purchased in
+            onMain {
+                if purchased {
+                    self.showSearch()
+                } else {
+                    self.showOnboarding()
+                }
+            }
+        }
+    }
+    
+    func showLoad() {
+        navigationController.setNavigationBarHidden(true, animated: false)
+        let viewController = SplashViewController.instantiate(fromAppStoryboard: .splash)
+        navigationController.viewControllers = [viewController]
+        window?.rootViewController = navigationController
     }
     
     func showOnboarding() {
-        navigationController.setNavigationBarHidden(true, animated: false)
         let viewController = OnboradingViewController.instantiate(fromAppStoryboard: .onboarding)
         viewController.coordinator = self
         navigationController.viewControllers = [viewController]

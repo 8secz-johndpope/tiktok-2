@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="xPW-zH-NMk">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" id="hmo-R9-Lwx" customClass="SplashViewController" customModule="tiktok_analytics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LP8-rA-bSR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="7ir-GR-ayV">
+                                <rect key="frame" x="136.5" y="377" width="141" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="jaY-52-FU3">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="248"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TikTok Analytics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycV-dB-rfG">
+                                <rect key="frame" x="146.5" y="498" width="121" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="34"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ycV-dB-rfG" firstAttribute="centerX" secondItem="LP8-rA-bSR" secondAttribute="centerX" id="GcH-U8-OKN"/>
+                            <constraint firstItem="ycV-dB-rfG" firstAttribute="top" secondItem="7ir-GR-ayV" secondAttribute="bottom" constant="25" id="XwH-fg-3NW"/>
+                            <constraint firstItem="ycV-dB-rfG" firstAttribute="centerY" secondItem="LP8-rA-bSR" secondAttribute="centerY" constant="60" id="dbD-io-PUC"/>
+                            <constraint firstItem="7ir-GR-ayV" firstAttribute="centerX" secondItem="LP8-rA-bSR" secondAttribute="centerX" id="ptS-7S-q1f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X2L-D6-qEI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MmU-CH-ROY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="141" height="96"/>
+        <namedColor name="backgroundColor">
+            <color red="0.14117647058823529" green="0.18431372549019609" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
