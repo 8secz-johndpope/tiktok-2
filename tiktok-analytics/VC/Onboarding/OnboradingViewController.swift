@@ -126,6 +126,7 @@ class OnboradingViewController: UIViewController {
             return
         }
         
+        cell.textField.resignFirstResponder()
         cell.loadingLabel.isHidden = false
         continueButton.isUserInteractionEnabled = false
         cell.textField.isUserInteractionEnabled = false
@@ -209,6 +210,7 @@ extension OnboradingViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        loadProfile(name: textField.text)
         return false
     }
 }

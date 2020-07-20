@@ -107,7 +107,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfY-7Z-3l2">
                                                 <rect key="frame" x="259" y="0.0" width="21" height="21"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="usW-DZ-Fw6">
+                                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="usW-DZ-Fw6">
                                                         <rect key="frame" x="3.9999999999999991" y="4.3333333333333295" width="12.666666666666664" height="12.333333333333336"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="12.5" id="bf8-YF-mYm">
