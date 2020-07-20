@@ -1,18 +1,23 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel! {
+        didSet {
+            titleLabel.text = Localization.tiktokAnalytics
+        }
+    }
     @IBOutlet weak var textField: UITextField! {
         didSet {
             textField.layer.cornerRadius = 15.0
             textField.layer.masksToBounds = true
             textField.delegate = self
-            textField.attributedPlaceholder = NSAttributedString(string: "TikTok Username",
+            textField.attributedPlaceholder = NSAttributedString(string: Localization.textFieldPlaceholder,
             attributes: [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x939393)])
         }
     }
     @IBOutlet weak var searchButton: HighlightedButton! {
         didSet {
+            searchButton.setTitle(Localization.showAnalytics, for: .normal)
             searchButton.addTarget(self, action: #selector(actionSearch), for: .touchUpInside)
         }
     }
@@ -21,6 +26,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var loadingLabel: UILabel! {
         didSet {
             loadingLabel.isHidden = true
+            loadingLabel.text = Localization.loading
         }
     }
     

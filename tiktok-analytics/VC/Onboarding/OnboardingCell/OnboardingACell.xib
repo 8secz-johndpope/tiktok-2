@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -123,6 +123,10 @@
                 <constraint firstItem="4Rq-Tb-om9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cWg-IL-Mqq"/>
                 <constraint firstAttribute="bottom" secondItem="4Rq-Tb-om9" secondAttribute="bottom" id="qrv-IF-Jix"/>
             </constraints>
+            <connections>
+                <outlet property="label1" destination="tCb-wB-c2h" id="O8E-Dk-uJS"/>
+                <outlet property="label2" destination="quL-vo-rxC" id="ry5-4U-NAF"/>
+            </connections>
             <point key="canvasLocation" x="115.21739130434783" y="149.33035714285714"/>
         </collectionViewCell>
     </objects>

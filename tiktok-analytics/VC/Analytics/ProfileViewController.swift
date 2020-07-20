@@ -24,6 +24,11 @@ class ProfileViewController: UIViewController, BarButtonItemConfigurable {
     @IBOutlet weak var detailLikesCountLabel: UILabel!
     @IBOutlet weak var detailLostCountLabel: UILabel!
     @IBOutlet weak var videosCountLabel: UILabel!
+    @IBOutlet weak var videosLabel: UILabel! {
+        didSet {
+            videosLabel.text = Localization.videos
+        }
+    }
     
     private lazy var headerView: HeaderView = {
         guard let view = Bundle.main.loadNibNamed("\(HeaderView.self)", owner: nil, options: nil)?.first as? HeaderView else { return HeaderView() }
@@ -42,6 +47,41 @@ class ProfileViewController: UIViewController, BarButtonItemConfigurable {
     }
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
+    @IBOutlet weak var currentFlowLabel: UILabel! {
+        didSet {
+            currentFlowLabel.text = Localization.currentFollowDetails
+        }
+    }
+    @IBOutlet weak var followersLabel: UILabel! {
+        didSet {
+            followersLabel.text = Localization.followers
+        }
+    }
+    @IBOutlet weak var gainedLabel: UILabel! {
+        didSet {
+            gainedLabel.text = Localization.gained
+        }
+    }
+    @IBOutlet weak var likesLabell: UILabel! {
+        didSet {
+            likesLabell.text = Localization.likes
+        }
+    }
+    @IBOutlet weak var lostLabel: UILabel! {
+        didSet {
+            lostLabel.text = Localization.lost
+        }
+    }
+    @IBOutlet weak var showLabel: UILabel! {
+        didSet {
+            showLabel.text = Localization.showAnalytics
+        }
+    }
+    @IBOutlet weak var recentLabel: UILabel! {
+        didSet {
+            recentLabel.text = Localization.recentVideos
+        }
+    }
     var coordinator: AppCoordinator?
     
     var profile: Profile!

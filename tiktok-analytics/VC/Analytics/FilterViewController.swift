@@ -9,11 +9,11 @@ enum Filter: String, CaseIterable {
     
     var title: String {
         switch self {
-        case .date: return "Date"
-        case .views: return "Views"
-        case .likes: return "Likes"
-        case .comments: return "Comments"
-        case .shares: return "Shares"
+        case .date: return Localization.date
+        case .views: return Localization.views
+        case .likes: return Localization.likes
+        case .comments: return Localization.comments
+        case .shares: return Localization.shares
         }
     }
 }
@@ -40,6 +40,7 @@ class FilterViewController: UIViewController {
     
     @IBOutlet weak var applyButton: HighlightedButton! {
         didSet {
+            applyButton.setTitle(Localization.apply, for: .normal)
             applyButton.addTarget(self, action: #selector(applyFilter), for: .touchUpInside)
         }
     }

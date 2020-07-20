@@ -1,20 +1,12 @@
 import Alamofire
 
 class Network {
-    
-    enum NetworkError: Error {
-        case noDataOrError
-        
-        var localizedDescription: String {
-            return "Please, enter valid username"
-        }
-    }
 
     struct StatusCodeError: Error {
         let code: Int
         
         var localizedDescription: String {
-            return "Please, enter valid username"
+            return Localization.notFound
         }
     }
     

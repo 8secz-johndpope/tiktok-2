@@ -1,4 +1,5 @@
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -12,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PurchaseHelper.shared.completeIAPTransactions()
         UIBarButtonItem.setCustomAppearance()
         UINavigationBar.setCustomAppearance()
+        FirebaseApp.configure()
         
         window = UIWindow.init(frame: UIScreen.main.bounds)
         appCoordinator = AppCoordinator(window: window!)

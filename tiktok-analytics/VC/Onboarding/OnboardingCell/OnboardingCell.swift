@@ -1,8 +1,35 @@
 import UIKit
 
-class OnboardingACell: UICollectionViewCell { }
+class OnboardingACell: UICollectionViewCell {
+    
+    @IBOutlet weak var label1: UILabel! {
+        didSet {
+            label1.text = Localization.onboardingA1
+        }
+    }
+    @IBOutlet weak var label2: UILabel! {
+        didSet {
+            label2.text = Localization.onboardingA2
+        }
+    }
+}
 
 class OnboardingBCell: UICollectionViewCell {
+    @IBOutlet weak var titleLabel: UILabel! {
+        didSet {
+            titleLabel.text = Localization.onboardingBTitle
+        }
+    }
+    @IBOutlet weak var label1: UILabel! {
+        didSet {
+            label1.text = Localization.onboardingB1
+        }
+    }
+    @IBOutlet weak var label2: UILabel! {
+        didSet {
+            label2.text = Localization.onboardingB2
+        }
+    }
     @IBOutlet weak var check1ImageView: UIImageView!
     @IBOutlet weak var check2ImageView: UIImageView!
     @IBOutlet weak var check1ContainerView: UIView! {
@@ -26,6 +53,31 @@ class OnboardingBCell: UICollectionViewCell {
 }
 
 class OnboardingCCell: UICollectionViewCell {
+    @IBOutlet weak var titleLabel: UILabel! {
+        didSet {
+            titleLabel.text = Localization.onboardingCTitle
+        }
+    }
+    @IBOutlet weak var label1: UILabel! {
+        didSet {
+            label1.text = Localization.onboardingC1
+        }
+    }
+    @IBOutlet weak var label2: UILabel! {
+        didSet {
+            label2.text = Localization.onboardingC2
+        }
+    }
+    @IBOutlet weak var label3: UILabel! {
+        didSet {
+            label3.text = Localization.onboardingC3
+        }
+    }
+    @IBOutlet weak var label4: UILabel! {
+        didSet {
+            label4.text = Localization.onboardingC4
+        }
+    }
     @IBOutlet weak var check1ImageView: UIImageView!
     @IBOutlet weak var check2ImageView: UIImageView!
     @IBOutlet weak var check3ImageView: UIImageView!
@@ -70,9 +122,15 @@ class OnboardingCCell: UICollectionViewCell {
 
 class OnboardingDCell: UICollectionViewCell {
     
+    @IBOutlet weak var titleLabel: UILabel! {
+        didSet {
+            titleLabel.text = Localization.onboardingDTitle
+        }
+    }
     @IBOutlet weak var loadingLabel: UILabel! {
         didSet {
             loadingLabel.isHidden = true
+            loadingLabel.text = Localization.loading
         }
     }
     
@@ -80,7 +138,7 @@ class OnboardingDCell: UICollectionViewCell {
         didSet {
             textField.layer.cornerRadius = textField.bounds.height / 2
             textField.layer.masksToBounds = true
-            textField.attributedPlaceholder = NSAttributedString(string: "TikTok Username",
+            textField.attributedPlaceholder = NSAttributedString(string: Localization.textFieldPlaceholder,
                                                                  attributes: [NSAttributedString.Key.foregroundColor: UIColor(hex: 0xA1A1A1)])
         }
     }

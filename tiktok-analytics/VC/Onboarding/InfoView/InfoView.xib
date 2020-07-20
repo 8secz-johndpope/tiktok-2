@@ -202,6 +202,8 @@
                 <outlet property="detailGainedCountLabel" destination="f0j-LY-1k8" id="nJQ-Vr-6Y1"/>
                 <outlet property="detailLikesCountLabel" destination="U3o-fL-7LV" id="cIP-7c-5f7"/>
                 <outlet property="detailLostCountLabel" destination="3XN-uB-9eB" id="tze-NW-aWB"/>
+                <outlet property="followersTitleLabel" destination="trY-7L-WNH" id="2Zl-to-D5a"/>
+                <outlet property="gainedTitleLabel" destination="JGI-rd-EiK" id="O93-9g-lB1"/>
                 <outlet property="headerContentView" destination="oLy-F4-sdB" id="IHM-YS-xOx"/>
                 <outlet property="nameLabel" destination="x1S-zP-a9X" id="KJ1-Wz-4Yy"/>
                 <outlet property="separatorView" destination="i2b-Fb-ZMG" id="9TV-cC-tEG"/>
@@ -570,10 +572,16 @@
                 <outlet property="detailGainedCountLabel" destination="UTG-4u-3Mj" id="7bS-rI-oEF"/>
                 <outlet property="detailLikesCountLabel" destination="U3o-fL-7LV" id="Bs1-si-6Ea"/>
                 <outlet property="detailLostCountLabel" destination="3XN-uB-9eB" id="4jI-Lc-FXn"/>
+                <outlet property="followersTitleLabel" destination="F8M-12-2bX" id="ovX-8S-oL2"/>
+                <outlet property="gainedTitleLabel" destination="Beb-Pi-a6b" id="TTi-ew-vfq"/>
                 <outlet property="headerContentView" destination="Y82-7f-Z3x" id="0EV-tL-1UO"/>
+                <outlet property="likesTitleLabel" destination="fQ4-Hx-4x5" id="9J5-3q-SBq"/>
+                <outlet property="lostTitleLabel" destination="0i9-j9-PHe" id="uPF-Xf-QRX"/>
                 <outlet property="nameLabel" destination="tOf-Q2-Nl0" id="wnC-4L-oJB"/>
                 <outlet property="separatorView" destination="lzJ-p6-dGt" id="ENj-ES-9SP"/>
+                <outlet property="showLabel" destination="Imq-OQ-VSH" id="9cj-Bo-ImM"/>
                 <outlet property="videosCountLabel" destination="EGd-w0-LQa" id="mBF-zQ-T7d"/>
+                <outlet property="videosTitleLabel" destination="9Ys-uz-3LP" id="6BG-Gg-mAu"/>
             </connections>
             <point key="canvasLocation" x="423" y="484"/>
         </view>

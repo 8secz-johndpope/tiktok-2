@@ -81,6 +81,7 @@
             <connections>
                 <outlet property="loadingLabel" destination="Dri-5D-bxN" id="DJw-ba-Nxc"/>
                 <outlet property="textField" destination="B9d-wK-gG7" id="x89-1c-N19"/>
+                <outlet property="titleLabel" destination="NZp-sz-5rG" id="b0K-mJ-oyq"/>
             </connections>
             <point key="canvasLocation" x="138.40579710144928" y="152.67857142857142"/>
         </collectionViewCell>

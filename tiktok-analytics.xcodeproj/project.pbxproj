@@ -12,7 +12,6 @@
 		E00C62B424AB3A90006D3B81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E00C62B324AB3A90006D3B81 /* Assets.xcassets */; };
 		E00C62B724AB3A90006D3B81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E00C62B524AB3A90006D3B81 /* LaunchScreen.storyboard */; };
 		E00C62C524AB3B84006D3B81 /* OnboradingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62C424AB3B84006D3B81 /* OnboradingViewController.swift */; };
-		E00C62C724AB3B8E006D3B81 /* PaywallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62C624AB3B8E006D3B81 /* PaywallViewController.swift */; };
 		E00C62C924AB3B9D006D3B81 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62C824AB3B9D006D3B81 /* SearchViewController.swift */; };
 		E00C62CB24AB3BA4006D3B81 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62CA24AB3BA4006D3B81 /* ProfileViewController.swift */; };
 		E00C62CD24AB3BB3006D3B81 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62CC24AB3BB3006D3B81 /* VideosViewController.swift */; };
@@ -30,11 +29,13 @@
 		E0436B3B24C4709C00B5EB81 /* InfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0436B3A24C4709C00B5EB81 /* InfoView.xib */; };
 		E0436B3D24C4BEB700B5EB81 /* UIView+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0436B3C24C4BEB700B5EB81 /* UIView+Blur.swift */; };
 		E0436B3F24C56C0600B5EB81 /* PurchaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0436B3E24C56C0600B5EB81 /* PurchaseHelper.swift */; };
+		E0436B4224C5EF0F00B5EB81 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E0436B4424C5EF0F00B5EB81 /* Localizable.strings */; };
+		E0436B4624C5EF2200B5EB81 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0436B4524C5EF2100B5EB81 /* Localization.swift */; };
+		E0436B4924C5FC2E00B5EB81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0436B4824C5FC2E00B5EB81 /* GoogleService-Info.plist */; };
 		E0D23E1524AB46D800CD75B7 /* Analytics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0D23E1424AB46D800CD75B7 /* Analytics.storyboard */; };
 		E0D23E1824AB471500CD75B7 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E1624AB471500CD75B7 /* Storyboarded.swift */; };
 		E0D23E1924AB471500CD75B7 /* DispatchQueue+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E1724AB471500CD75B7 /* DispatchQueue+Custom.swift */; };
 		E0D23E1D24AB476C00CD75B7 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E1C24AB476C00CD75B7 /* String+Extension.swift */; };
-		E0D23E1F24AB47A300CD75B7 /* Paywall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0D23E1E24AB47A300CD75B7 /* Paywall.storyboard */; };
 		E0D23E2124AB47AB00CD75B7 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0D23E2024AB47AB00CD75B7 /* Onboarding.storyboard */; };
 		E0D23E2324AB56D400CD75B7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E2224AB56D400CD75B7 /* Colors.swift */; };
 		E0D23E2C24AB5A4700CD75B7 /* RadialGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E2B24AB5A4700CD75B7 /* RadialGradientButton.swift */; };
@@ -72,7 +73,6 @@
 		E00C62B624AB3A90006D3B81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E00C62B824AB3A90006D3B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E00C62C424AB3B84006D3B81 /* OnboradingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboradingViewController.swift; sourceTree = "<group>"; };
-		E00C62C624AB3B8E006D3B81 /* PaywallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallViewController.swift; sourceTree = "<group>"; };
 		E00C62C824AB3B9D006D3B81 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E00C62CA24AB3BA4006D3B81 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E00C62CC24AB3BB3006D3B81 /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = "<group>"; };
@@ -90,11 +90,13 @@
 		E0436B3A24C4709C00B5EB81 /* InfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoView.xib; sourceTree = "<group>"; };
 		E0436B3C24C4BEB700B5EB81 /* UIView+Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Blur.swift"; sourceTree = "<group>"; };
 		E0436B3E24C56C0600B5EB81 /* PurchaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseHelper.swift; sourceTree = "<group>"; };
+		E0436B4324C5EF0F00B5EB81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E0436B4524C5EF2100B5EB81 /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		E0436B4824C5FC2E00B5EB81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E0D23E1424AB46D800CD75B7 /* Analytics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Analytics.storyboard; sourceTree = "<group>"; };
 		E0D23E1624AB471500CD75B7 /* Storyboarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		E0D23E1724AB471500CD75B7 /* DispatchQueue+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Custom.swift"; sourceTree = "<group>"; };
 		E0D23E1C24AB476C00CD75B7 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		E0D23E1E24AB47A300CD75B7 /* Paywall.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Paywall.storyboard; sourceTree = "<group>"; };
 		E0D23E2024AB47AB00CD75B7 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		E0D23E2224AB56D400CD75B7 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		E0D23E2B24AB5A4700CD75B7 /* RadialGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialGradientButton.swift; sourceTree = "<group>"; };
@@ -166,6 +168,9 @@
 			isa = PBXGroup;
 			children = (
 				E00C62AA24AB3A8F006D3B81 /* AppDelegate.swift */,
+				E0436B4424C5EF0F00B5EB81 /* Localizable.strings */,
+				E0436B4524C5EF2100B5EB81 /* Localization.swift */,
+				E0436B4824C5FC2E00B5EB81 /* GoogleService-Info.plist */,
 				E0D23E2424AB5A1200CD75B7 /* Views */,
 				E00C62D124AB3E00006D3B81 /* Networking */,
 				E00C62CE24AB3BF8006D3B81 /* Coordinator */,
@@ -186,7 +191,6 @@
 				E034830D24C59524003FFDAB /* Spinner */,
 				E034830824C59214003FFDAB /* Splash */,
 				E00C62C324AB3B77006D3B81 /* Analytics */,
-				E00C62C224AB3B65006D3B81 /* Paywall */,
 				E00C62C124AB3B5F006D3B81 /* Onboarding */,
 			);
 			path = VC;
@@ -222,15 +226,6 @@
 				E0D23E2024AB47AB00CD75B7 /* Onboarding.storyboard */,
 			);
 			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		E00C62C224AB3B65006D3B81 /* Paywall */ = {
-			isa = PBXGroup;
-			children = (
-				E00C62C624AB3B8E006D3B81 /* PaywallViewController.swift */,
-				E0D23E1E24AB47A300CD75B7 /* Paywall.storyboard */,
-			);
-			path = Paywall;
 			sourceTree = "<group>";
 		};
 		E00C62C324AB3B77006D3B81 /* Analytics */ = {
@@ -452,12 +447,13 @@
 				E0D781C824C0AA4E007B920A /* OnboardingACell.xib in Resources */,
 				E0D781CD24C0AFEF007B920A /* OnboardingBCell.xib in Resources */,
 				E034830A24C5922E003FFDAB /* Splash.storyboard in Resources */,
+				E0436B4924C5FC2E00B5EB81 /* GoogleService-Info.plist in Resources */,
 				E0D781D524C0B749007B920A /* OnboardingDCell.xib in Resources */,
 				E0D781C124C09DE7007B920A /* Anal-2.mp4 in Resources */,
 				E0436B3B24C4709C00B5EB81 /* InfoView.xib in Resources */,
 				E0D23E1524AB46D800CD75B7 /* Analytics.storyboard in Resources */,
+				E0436B4224C5EF0F00B5EB81 /* Localizable.strings in Resources */,
 				E00C62B424AB3A90006D3B81 /* Assets.xcassets in Resources */,
-				E0D23E1F24AB47A300CD75B7 /* Paywall.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +511,7 @@
 				E0436B3F24C56C0600B5EB81 /* PurchaseHelper.swift in Sources */,
 				E0D23E3F24ABB0D100CD75B7 /* VideoCollectionViewCell.swift in Sources */,
 				E034830C24C5924B003FFDAB /* SplashViewController.swift in Sources */,
+				E0436B4624C5EF2200B5EB81 /* Localization.swift in Sources */,
 				E0D23E3224AB744A00CD75B7 /* Device+Extension.swift in Sources */,
 				E034830F24C5952D003FFDAB /* SpinnerViewController.swift in Sources */,
 				E0436B3924C4709500B5EB81 /* InfoView.swift in Sources */,
@@ -538,7 +535,6 @@
 				E00C62C924AB3B9D006D3B81 /* SearchViewController.swift in Sources */,
 				E0D781AF24BDE795007B920A /* Video.swift in Sources */,
 				E0D23E2324AB56D400CD75B7 /* Colors.swift in Sources */,
-				E00C62C724AB3B8E006D3B81 /* PaywallViewController.swift in Sources */,
 				E00C62CD24AB3BB3006D3B81 /* VideosViewController.swift in Sources */,
 				E0D23E3C24ABAA6C00CD75B7 /* UIViewController+BarButtonItemConfigurable.swift in Sources */,
 				E0D23E4124AC60EB00CD75B7 /* FilterViewController.swift in Sources */,
@@ -562,6 +558,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		E0436B4424C5EF0F00B5EB81 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0436B4324C5EF0F00B5EB81 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -569,6 +573,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -629,6 +634,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

@@ -19,7 +19,7 @@ class OnboradingViewController: UIViewController {
     @IBOutlet weak var continueButton: UIButton! {
         didSet {
             continueButton.addTarget(self, action: #selector(actionNext), for: .touchUpInside)
-            continueButton.setTitle("Continue", for: .normal)
+            continueButton.setTitle(Localization.continue, for: .normal)
         }
     }
     
@@ -68,7 +68,7 @@ class OnboradingViewController: UIViewController {
     
     private var currentPage = 0 {
         willSet {
-            if newValue == 3 { continueButton.setTitle("Analyse", for: .normal) }
+            if newValue == 3 { continueButton.setTitle(Localization.analyse, for: .normal) }
         }
     }
     

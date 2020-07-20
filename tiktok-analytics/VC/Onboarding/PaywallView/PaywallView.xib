@@ -136,9 +136,11 @@ $49.99/year</string>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="infoLabel" destination="df9-Re-BtC" id="871-gA-sqR"/>
                 <outlet property="privacyButton" destination="sFO-l2-bCq" id="oE0-rc-c9t"/>
                 <outlet property="purchaseButton" destination="87Q-l3-hwZ" id="iNx-oF-oc2"/>
                 <outlet property="termsButton" destination="Szp-Pe-PMe" id="9MC-YT-THZ"/>
+                <outlet property="titleLabel" destination="v8o-3E-tva" id="xl8-NU-JfE"/>
             </connections>
             <point key="canvasLocation" x="54" y="-419"/>
         </view>

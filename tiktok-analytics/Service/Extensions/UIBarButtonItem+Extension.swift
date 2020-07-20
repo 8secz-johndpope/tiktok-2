@@ -9,7 +9,7 @@ extension UIBarButtonItem {
     }
     
     class func sortBarButtonItem(target: Any?, action: Selector?) -> UIBarButtonItem {
-        return UIBarButtonItem(title: "Sort by", style: .plain, target: target, action: action)
+        return UIBarButtonItem(title: Localization.sortBy, style: .plain, target: target, action: action)
     }
     
     class func exitBarButtonItem(target: Any?, action: Selector?) -> UIBarButtonItem {

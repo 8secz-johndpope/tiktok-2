@@ -2,6 +2,37 @@ import UIKit
 
 class InfoView: UIView {
     
+    @IBOutlet weak var followersTitleLabel: UILabel! {
+        didSet {
+            followersTitleLabel.text = Localization.followers
+        }
+    }
+    @IBOutlet weak var gainedTitleLabel: UILabel! {
+        didSet {
+            gainedTitleLabel.text = Localization.gained
+        }
+    }
+    @IBOutlet weak var likesTitleLabel: UILabel! {
+        didSet {
+            likesTitleLabel.text = Localization.likes
+        }
+    }
+    @IBOutlet weak var lostTitleLabel: UILabel! {
+        didSet {
+            lostTitleLabel.text = Localization.lost
+        }
+    }
+    @IBOutlet weak var videosTitleLabel: UILabel! {
+        didSet {
+            videosTitleLabel.text = Localization.videos
+        }
+    }
+    @IBOutlet weak var showLabel: UILabel! {
+        didSet {
+            showLabel.text = Localization.showAnalytics
+        }
+    }
+    
     @IBOutlet weak var separatorView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var bioLabel: UILabel!

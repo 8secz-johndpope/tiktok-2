@@ -1,0 +1,8 @@
+strings:
+  inputs: tiktok-analytics/en.lproj
+  filter: Localizable\.strings$
+  outputs:
+    - templateName: flat-swift4
+      output: tiktok-analytics/Localization.swift
+      params:
+        enumName: Localization

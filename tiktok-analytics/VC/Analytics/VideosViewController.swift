@@ -33,7 +33,7 @@ class VideosViewController: UIViewController, BarButtonItemConfigurable {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Colors.backgroundColor
-        navigationItem.title = "Top Videos"
+        navigationItem.title = Localization.topVideos
         refreshRightBarButtonItem()
         
         let control = UIRefreshControl()

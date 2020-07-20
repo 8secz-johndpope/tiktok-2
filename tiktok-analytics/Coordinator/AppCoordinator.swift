@@ -57,13 +57,13 @@ class AppCoordinator: NSObject {
     }
     
     func showEmtyNameAlert() {
-        let alert = UIAlertController(style: .alert, title: "Alert", message: "Fill username")
+        let alert = UIAlertController(style: .alert, title: Localization.alert, message: Localization.fillUsername)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         navigationController.present(alert, animated: true)
     }
     
     func showErrorAlert(error: String) {
-        let alert = UIAlertController(style: .alert, title: "Alert", message: error)
+        let alert = UIAlertController(style: .alert, title: Localization.alert, message: error)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         navigationController.present(alert, animated: true)
     }

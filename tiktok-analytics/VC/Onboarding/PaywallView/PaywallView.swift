@@ -9,6 +9,11 @@ protocol PaywallViewDelegate: class {
 
 class PaywallView: UIView {
     
+    @IBOutlet weak var titleLabel: UILabel! {
+        didSet {
+            titleLabel.text = Localization.premiumTitle
+        }
+    }
     private let attributes: [NSAttributedString.Key: Any] = [
     .font: UIFont.systemFont(ofSize: 10, weight: .bold),
     .foregroundColor: UIColor.white,
@@ -16,7 +21,7 @@ class PaywallView: UIView {
 
     @IBOutlet weak var privacyButton: UIButton! {
         didSet {
-            let attributeString = NSMutableAttributedString(string: "Privacy Policy",
+            let attributeString = NSMutableAttributedString(string: Localization.privacyPolicy,
                                                             attributes: attributes)
             privacyButton.setAttributedTitle(attributeString, for: .normal)
 
@@ -24,7 +29,7 @@ class PaywallView: UIView {
     }
     @IBOutlet weak var termsButton: UIButton! {
         didSet {
-            let attributeString = NSMutableAttributedString(string: "Terms of use",
+            let attributeString = NSMutableAttributedString(string: Localization.terms,
                                                             attributes: attributes)
             termsButton.setAttributedTitle(attributeString, for: .normal)
         }
@@ -41,11 +46,15 @@ class PaywallView: UIView {
     weak var delegate: PaywallViewDelegate?
     
     func setup() {
-        let buttonText = String(format: "Start your free 3-day trial\n%@/year", UserDefaults.standard.string(forKey: Constants.productPrice) ?? "$49.99")
+        let buttonText = Localization.premiumButtonTitle(UserDefaults.standard.string(forKey: Constants.productPrice) ?? "$49.99")
         purchaseButton.setTitle(buttonText, for: .normal)
         
     }
-    
+    @IBOutlet weak var infoLabel: UILabel! {
+        didSet {
+            infoLabel.text = Localization.subscriptionInfo
+        }
+    }
     @IBAction func actionPurchase() {
         delegate?.purchase()
     }

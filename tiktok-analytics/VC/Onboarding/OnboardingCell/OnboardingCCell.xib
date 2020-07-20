@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -290,6 +290,11 @@
                 <outlet property="check3ImageView" destination="4bf-4j-eCX" id="iBT-12-5YU"/>
                 <outlet property="check4ContainerView" destination="klJ-Co-FNz" id="ach-0c-2b4"/>
                 <outlet property="check4ImageView" destination="EyC-bh-G7G" id="bIJ-qS-2dm"/>
+                <outlet property="label1" destination="DQu-Ss-Lkp" id="8HL-tV-4Nb"/>
+                <outlet property="label2" destination="siH-G9-lOJ" id="fXx-cw-IbW"/>
+                <outlet property="label3" destination="8NS-fg-dlx" id="utx-K2-mpo"/>
+                <outlet property="label4" destination="Wae-2D-tDO" id="Q66-8g-gKT"/>
+                <outlet property="titleLabel" destination="jvr-wB-HwR" id="kO8-OJ-wyY"/>
             </connections>
             <point key="canvasLocation" x="138.40579710144928" y="152.67857142857142"/>
         </collectionViewCell>
