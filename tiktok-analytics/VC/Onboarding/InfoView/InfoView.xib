@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -26,7 +26,7 @@
                     </variation>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYW-41-x1D">
-                    <rect key="frame" x="160" y="38" width="199" height="14.5"/>
+                    <rect key="frame" x="160" y="38" width="199" height="21.5"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -65,10 +65,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="followers_big" translatesAutoresizingMaskIntoConstraints="NO" id="NRZ-IO-PNL">
-                                    <rect key="frame" x="40" y="0.0" width="110" height="100"/>
+                                    <rect key="frame" x="-26.5" y="0.0" width="176.5" height="100"/>
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="followers" translatesAutoresizingMaskIntoConstraints="NO" id="5P0-2Q-xcW">
-                                    <rect key="frame" x="30" y="33.5" width="32" height="33"/>
+                                    <rect key="frame" x="30" y="25" width="50" height="50"/>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ser-Q7-T2f">
                                     <rect key="frame" x="86" y="38" width="43" height="24"/>
@@ -115,10 +115,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gained_big" translatesAutoresizingMaskIntoConstraints="NO" id="ZKz-6W-Hgw">
-                                    <rect key="frame" x="44" y="0.0" width="106" height="100"/>
+                                    <rect key="frame" x="-20" y="0.0" width="170" height="100"/>
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gained" translatesAutoresizingMaskIntoConstraints="NO" id="srm-Ni-Lev">
-                                    <rect key="frame" x="30" y="34" width="39" height="32"/>
+                                    <rect key="frame" x="30" y="26" width="60.5" height="48"/>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="JkB-DD-BYu">
                                     <rect key="frame" x="86" y="38" width="43" height="24"/>
@@ -202,7 +202,9 @@
                 <outlet property="detailGainedCountLabel" destination="f0j-LY-1k8" id="nJQ-Vr-6Y1"/>
                 <outlet property="detailLikesCountLabel" destination="U3o-fL-7LV" id="cIP-7c-5f7"/>
                 <outlet property="detailLostCountLabel" destination="3XN-uB-9eB" id="tze-NW-aWB"/>
+                <outlet property="followersStack" destination="Ser-Q7-T2f" id="rot-Ra-5OU"/>
                 <outlet property="followersTitleLabel" destination="trY-7L-WNH" id="2Zl-to-D5a"/>
+                <outlet property="gainedStack" destination="JkB-DD-BYu" id="R9g-gH-sS8"/>
                 <outlet property="gainedTitleLabel" destination="JGI-rd-EiK" id="O93-9g-lB1"/>
                 <outlet property="headerContentView" destination="oLy-F4-sdB" id="IHM-YS-xOx"/>
                 <outlet property="nameLabel" destination="x1S-zP-a9X" id="KJ1-Wz-4Yy"/>
@@ -216,9 +218,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="@bitchass" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOf-Q2-Nl0">
-                    <rect key="frame" x="200" y="32" width="552" height="17"/>
+                    <rect key="frame" x="200" y="32" width="552" height="29"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="17" id="f4m-NU-R77"/>
+                        <constraint firstAttribute="height" constant="29" id="xI3-MI-WOs"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -228,7 +230,7 @@
                     </variation>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s46-Yq-edh">
-                    <rect key="frame" x="200" y="54" width="552" height="14.5"/>
+                    <rect key="frame" x="200" y="71" width="30.5" height="21.5"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -237,7 +239,7 @@
                     </variation>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y82-7f-Z3x">
-                    <rect key="frame" x="200" y="106.5" width="300" height="45"/>
+                    <rect key="frame" x="200" y="130.5" width="300" height="45"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="DuX-g8-xb1"/>
@@ -264,10 +266,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="230" height="150"/>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="followers_big" translatesAutoresizingMaskIntoConstraints="NO" id="UqJ-JK-xC5">
-                                            <rect key="frame" x="120" y="0.0" width="110" height="150"/>
+                                            <rect key="frame" x="53.5" y="0.0" width="176.5" height="150"/>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="followers" translatesAutoresizingMaskIntoConstraints="NO" id="IcA-Kn-2E0">
-                                            <rect key="frame" x="30" y="58.5" width="32" height="33"/>
+                                            <rect key="frame" x="30" y="50" width="50" height="50"/>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Nwl-8I-MR8">
                                             <rect key="frame" x="136.5" y="54" width="68.5" height="39.5"/>
@@ -311,10 +313,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="230" height="150"/>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="likes_big" translatesAutoresizingMaskIntoConstraints="NO" id="7Rl-AY-8QD">
-                                            <rect key="frame" x="126" y="0.0" width="104" height="150"/>
+                                            <rect key="frame" x="66.5" y="0.0" width="163.5" height="150"/>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="likes" translatesAutoresizingMaskIntoConstraints="NO" id="Fqw-9m-iIB">
-                                            <rect key="frame" x="30" y="59.5" width="35" height="31.5"/>
+                                            <rect key="frame" x="30" y="51.5" width="53.5" height="47"/>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="WGb-lf-sFz">
                                             <rect key="frame" x="164.5" y="54" width="40.5" height="39.5"/>
@@ -363,10 +365,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="230" height="150"/>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gained_big" translatesAutoresizingMaskIntoConstraints="NO" id="hSg-d3-R5s">
-                                            <rect key="frame" x="124" y="0.0" width="106" height="150"/>
+                                            <rect key="frame" x="60" y="0.0" width="170" height="150"/>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gained" translatesAutoresizingMaskIntoConstraints="NO" id="hL0-or-tSO">
-                                            <rect key="frame" x="30" y="59" width="39" height="32"/>
+                                            <rect key="frame" x="30" y="51" width="60.5" height="48"/>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="nB8-u8-Vab">
                                             <rect key="frame" x="157.5" y="54" width="47.5" height="39.5"/>
@@ -410,10 +412,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="230" height="150"/>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lost_big" translatesAutoresizingMaskIntoConstraints="NO" id="o4B-z3-Sla">
-                                            <rect key="frame" x="115" y="0.0" width="115" height="150"/>
+                                            <rect key="frame" x="60" y="0.0" width="170" height="150"/>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lost" translatesAutoresizingMaskIntoConstraints="NO" id="EJw-vq-egx">
-                                            <rect key="frame" x="30" y="59" width="39" height="32"/>
+                                            <rect key="frame" x="30" y="51" width="60.5" height="48"/>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="DYj-bP-LlL">
                                             <rect key="frame" x="174.5" y="54" width="34.5" height="39.5"/>
@@ -475,7 +477,7 @@
                                     </constraints>
                                 </view>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videos" translatesAutoresizingMaskIntoConstraints="NO" id="UqS-Ll-OJr">
-                                    <rect key="frame" x="30" y="50" width="35" height="26"/>
+                                    <rect key="frame" x="30" y="50" width="66" height="49"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Analytics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Imq-OQ-VSH">
                                     <rect key="frame" x="36" y="235" width="138" height="24"/>
@@ -484,7 +486,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="vNI-MG-Xz7">
-                                    <rect key="frame" x="100" y="50" width="40" height="38.5"/>
+                                    <rect key="frame" x="131" y="50" width="40" height="38.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="135" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGd-w0-LQa">
                                             <rect key="frame" x="0.0" y="0.0" width="40" height="24"/>
@@ -507,10 +509,10 @@
                                     </constraints>
                                 </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="YFR-95-Zy4">
-                                    <rect key="frame" x="95.5" y="293.5" width="7.5" height="12.5"/>
+                                    <rect key="frame" x="91" y="287" width="16" height="25.5"/>
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Ce3-a7-kok">
-                                    <rect key="frame" x="107.5" y="293.5" width="7.5" height="12.5"/>
+                                    <rect key="frame" x="103" y="287" width="16" height="25.5"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -554,7 +556,7 @@
                 <constraint firstAttribute="trailing" secondItem="tOf-Q2-Nl0" secondAttribute="trailing" constant="16" id="ECr-pM-TbR"/>
                 <constraint firstItem="Y82-7f-Z3x" firstAttribute="leading" secondItem="tOf-Q2-Nl0" secondAttribute="leading" id="FeG-sc-5fH"/>
                 <constraint firstItem="s46-Yq-edh" firstAttribute="leading" secondItem="tOf-Q2-Nl0" secondAttribute="leading" id="Jen-sA-UXc"/>
-                <constraint firstAttribute="trailing" secondItem="s46-Yq-edh" secondAttribute="trailing" constant="16" id="LHI-PQ-KcB"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="s46-Yq-edh" secondAttribute="trailing" constant="16" id="LHI-PQ-KcB"/>
                 <constraint firstItem="lzJ-p6-dGt" firstAttribute="top" secondItem="S3I-CF-k1T" secondAttribute="top" id="N2y-xG-pYr"/>
                 <constraint firstAttribute="trailing" secondItem="lzJ-p6-dGt" secondAttribute="trailing" id="PwX-F9-HPb"/>
                 <constraint firstItem="ubK-ce-MZR" firstAttribute="centerX" secondItem="S3I-CF-k1T" secondAttribute="centerX" id="QxJ-bL-Qbz"/>
@@ -562,7 +564,7 @@
                 <constraint firstItem="lzJ-p6-dGt" firstAttribute="leading" secondItem="S3I-CF-k1T" secondAttribute="leading" id="edo-I0-1uR"/>
                 <constraint firstAttribute="bottom" secondItem="ubK-ce-MZR" secondAttribute="bottom" constant="16" id="efb-9G-8gf"/>
                 <constraint firstItem="Y82-7f-Z3x" firstAttribute="top" secondItem="s46-Yq-edh" secondAttribute="bottom" constant="38" id="jGL-ts-C4W"/>
-                <constraint firstItem="s46-Yq-edh" firstAttribute="top" secondItem="tOf-Q2-Nl0" secondAttribute="bottom" constant="5" id="lSh-9j-CTk"/>
+                <constraint firstItem="s46-Yq-edh" firstAttribute="top" secondItem="tOf-Q2-Nl0" secondAttribute="bottom" constant="10" id="lSh-9j-CTk"/>
                 <constraint firstItem="tOf-Q2-Nl0" firstAttribute="top" secondItem="S3I-CF-k1T" secondAttribute="top" constant="32" id="p7b-bC-Tu7"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -572,10 +574,14 @@
                 <outlet property="detailGainedCountLabel" destination="UTG-4u-3Mj" id="7bS-rI-oEF"/>
                 <outlet property="detailLikesCountLabel" destination="U3o-fL-7LV" id="Bs1-si-6Ea"/>
                 <outlet property="detailLostCountLabel" destination="3XN-uB-9eB" id="4jI-Lc-FXn"/>
+                <outlet property="followersStack" destination="Nwl-8I-MR8" id="6pD-pR-tPe"/>
                 <outlet property="followersTitleLabel" destination="F8M-12-2bX" id="ovX-8S-oL2"/>
+                <outlet property="gainedStack" destination="nB8-u8-Vab" id="saB-vk-xie"/>
                 <outlet property="gainedTitleLabel" destination="Beb-Pi-a6b" id="TTi-ew-vfq"/>
                 <outlet property="headerContentView" destination="Y82-7f-Z3x" id="0EV-tL-1UO"/>
+                <outlet property="likesStack" destination="WGb-lf-sFz" id="Wlv-3R-vT6"/>
                 <outlet property="likesTitleLabel" destination="fQ4-Hx-4x5" id="9J5-3q-SBq"/>
+                <outlet property="lostStack" destination="DYj-bP-LlL" id="JAC-2k-S59"/>
                 <outlet property="lostTitleLabel" destination="0i9-j9-PHe" id="uPF-Xf-QRX"/>
                 <outlet property="nameLabel" destination="tOf-Q2-Nl0" id="wnC-4L-oJB"/>
                 <outlet property="separatorView" destination="lzJ-p6-dGt" id="ENj-ES-9SP"/>
@@ -587,22 +593,22 @@
         </view>
     </objects>
     <resources>
-        <image name="arrow" width="7.5" height="12.5"/>
-        <image name="arrow_background" width="31" height="102"/>
-        <image name="followers" width="32" height="33"/>
-        <image name="followers_background" width="150" height="100"/>
-        <image name="followers_big" width="110" height="100"/>
-        <image name="gained" width="39" height="32"/>
-        <image name="gained_background" width="150" height="100"/>
-        <image name="gained_big" width="106" height="80"/>
-        <image name="likes" width="35" height="31.5"/>
-        <image name="likes_background" width="150" height="100"/>
-        <image name="likes_big" width="104" height="80"/>
-        <image name="lost" width="39" height="32"/>
-        <image name="lost_background" width="150" height="100"/>
-        <image name="lost_big" width="115" height="80"/>
-        <image name="videos" width="35" height="26"/>
-        <image name="videos_background" width="325" height="100"/>
+        <image name="arrow" width="16" height="25.5"/>
+        <image name="arrow_background" width="212" height="52"/>
+        <image name="followers" width="50" height="50"/>
+        <image name="followers_background" width="230" height="150"/>
+        <image name="followers_big" width="176.5" height="177"/>
+        <image name="gained" width="60.5" height="48"/>
+        <image name="gained_background" width="230" height="150"/>
+        <image name="gained_big" width="170" height="143"/>
+        <image name="likes" width="53.5" height="47"/>
+        <image name="likes_background" width="230" height="150"/>
+        <image name="likes_big" width="163.5" height="150"/>
+        <image name="lost" width="60.5" height="48"/>
+        <image name="lost_background" width="230" height="150"/>
+        <image name="lost_big" width="170" height="150"/>
+        <image name="videos" width="66" height="49"/>
+        <image name="videos_background" width="210" height="324"/>
         <image name="videos_big" width="179" height="157.5"/>
     </resources>
 </document>

@@ -43,6 +43,10 @@ class InfoView: UIView {
     @IBOutlet weak var videosCountLabel: UILabel!
     @IBOutlet weak var headerContentView: UIView!
     
+    @IBOutlet weak var gainedStack: UIStackView!
+    @IBOutlet weak var followersStack: UIStackView!
+    @IBOutlet weak var lostStack: UIStackView!
+    @IBOutlet weak var likesStack: UIStackView!
     var maskLayer: CAShapeLayer!
     
     private lazy var headerView: HeaderView = {
@@ -83,12 +87,17 @@ class InfoView: UIView {
         bioLabel.text = profile.bio
         detailFollowersCountLabel.text = profile.followers.formatted
         detailGainedCountLabel.text = profile.followers_gained.formatted
-        addBlur()
-        bringSubviewToFront(separatorView)
+        
+        bioLabel.blur(blurRadius: 3)
+        headerView.blur(blurRadius: 3)
+        followersStack.blur(blurRadius: 2)
+        gainedStack.blur(blurRadius: 2)
         
         guard UIDevice.current.isPad else { return }
         detailLikesCountLabel.text = profile.likes.formatted
         detailLostCountLabel.text = profile.followers_lost.formatted
         videosCountLabel.text = profile.videos.formatted
+        lostStack.blur(blurRadius: 3)
+        likesStack.blur(blurRadius: 3)
     }
 }

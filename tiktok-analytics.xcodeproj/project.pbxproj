@@ -20,6 +20,7 @@
 		E00C62D524AB4008006D3B81 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62D424AB4008006D3B81 /* Profile.swift */; };
 		E00C62D924AB4454006D3B81 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62D824AB4454006D3B81 /* Request.swift */; };
 		E00C62DB24AB453B006D3B81 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C62DA24AB453B006D3B81 /* Model.swift */; };
+		E033C1B524C74A4100C2F29C /* FMBlurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E033C1B424C74A4100C2F29C /* FMBlurable.swift */; };
 		E034830A24C5922E003FFDAB /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E034830924C5922E003FFDAB /* Splash.storyboard */; };
 		E034830C24C5924B003FFDAB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E034830B24C5924B003FFDAB /* SplashViewController.swift */; };
 		E034830F24C5952D003FFDAB /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E034830E24C5952D003FFDAB /* SpinnerViewController.swift */; };
@@ -81,6 +82,7 @@
 		E00C62D424AB4008006D3B81 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		E00C62D824AB4454006D3B81 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		E00C62DA24AB453B006D3B81 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		E033C1B424C74A4100C2F29C /* FMBlurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMBlurable.swift; sourceTree = "<group>"; };
 		E034830924C5922E003FFDAB /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		E034830B24C5924B003FFDAB /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		E034830E24C5952D003FFDAB /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 		E0D23E1B24AB476100CD75B7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E033C1B424C74A4100C2F29C /* FMBlurable.swift */,
 				E0D23E3124AB744900CD75B7 /* Device+Extension.swift */,
 				E0D23E1C24AB476C00CD75B7 /* String+Extension.swift */,
 				E0D23E2F24AB742800CD75B7 /* UIAlertController+Extension.swift */,
@@ -634,6 +637,7 @@
 				E00C62CD24AB3BB3006D3B81 /* VideosViewController.swift in Sources */,
 				E0D23E3C24ABAA6C00CD75B7 /* UIViewController+BarButtonItemConfigurable.swift in Sources */,
 				E0D23E4124AC60EB00CD75B7 /* FilterViewController.swift in Sources */,
+				E033C1B524C74A4100C2F29C /* FMBlurable.swift in Sources */,
 				E00C62D524AB4008006D3B81 /* Profile.swift in Sources */,
 				E0D781B624BF4FB5007B920A /* HeaderView.swift in Sources */,
 				E0D23E1924AB471500CD75B7 /* DispatchQueue+Custom.swift in Sources */,

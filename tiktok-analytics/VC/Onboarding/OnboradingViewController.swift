@@ -31,10 +31,9 @@ class OnboradingViewController: UIViewController {
     @IBOutlet weak var avatarImageView: UIImageView! {
         didSet {
             avatarImageView.layer.cornerRadius = UIDevice.current.isPad ? 70 : 50
-            avatarImageView.layer.borderWidth = 2.0
-            avatarImageView.layer.borderColor = UIColor.white.cgColor
+//            avatarImageView.layer.borderWidth = 2.0
+//            avatarImageView.layer.borderColor = UIColor.white.cgColor
             avatarImageView.layer.masksToBounds = true
-            avatarImageView.addBlur(style: .light, alpha: 0.5)
         }
     }
     
