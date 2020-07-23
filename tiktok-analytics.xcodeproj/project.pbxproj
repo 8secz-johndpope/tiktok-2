@@ -39,11 +39,9 @@
 		E0D23E1D24AB476C00CD75B7 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E1C24AB476C00CD75B7 /* String+Extension.swift */; };
 		E0D23E2124AB47AB00CD75B7 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0D23E2024AB47AB00CD75B7 /* Onboarding.storyboard */; };
 		E0D23E2324AB56D400CD75B7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E2224AB56D400CD75B7 /* Colors.swift */; };
-		E0D23E2C24AB5A4700CD75B7 /* RadialGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E2B24AB5A4700CD75B7 /* RadialGradientButton.swift */; };
 		E0D23E2E24AB5FC700CD75B7 /* HighlightedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E2D24AB5FC700CD75B7 /* HighlightedButton.swift */; };
 		E0D23E3024AB742800CD75B7 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E2F24AB742800CD75B7 /* UIAlertController+Extension.swift */; };
 		E0D23E3224AB744A00CD75B7 /* Device+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E3124AB744900CD75B7 /* Device+Extension.swift */; };
-		E0D23E3424AB94B800CD75B7 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E3324AB94B800CD75B7 /* GradientView.swift */; };
 		E0D23E3624ABA67B00CD75B7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E3524ABA67B00CD75B7 /* Constants.swift */; };
 		E0D23E3824ABA96B00CD75B7 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E3724ABA96B00CD75B7 /* UIBarButtonItem+Extension.swift */; };
 		E0D23E3A24ABA99C00CD75B7 /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D23E3924ABA99C00CD75B7 /* UINavigationBar+Extension.swift */; };
@@ -165,11 +163,9 @@
 		E0D23E1C24AB476C00CD75B7 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		E0D23E2024AB47AB00CD75B7 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		E0D23E2224AB56D400CD75B7 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		E0D23E2B24AB5A4700CD75B7 /* RadialGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialGradientButton.swift; sourceTree = "<group>"; };
 		E0D23E2D24AB5FC700CD75B7 /* HighlightedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightedButton.swift; sourceTree = "<group>"; };
 		E0D23E2F24AB742800CD75B7 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
 		E0D23E3124AB744900CD75B7 /* Device+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Device+Extension.swift"; sourceTree = "<group>"; };
-		E0D23E3324AB94B800CD75B7 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		E0D23E3524ABA67B00CD75B7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E0D23E3724ABA96B00CD75B7 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		E0D23E3924ABA99C00CD75B7 /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
@@ -391,9 +387,7 @@
 		E0D23E2424AB5A1200CD75B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E0D23E2B24AB5A4700CD75B7 /* RadialGradientButton.swift */,
 				E0D23E2D24AB5FC700CD75B7 /* HighlightedButton.swift */,
-				E0D23E3324AB94B800CD75B7 /* GradientView.swift */,
 				E0D781C224C09F4C007B920A /* VideoContainerView.swift */,
 			);
 			path = Views;
@@ -614,7 +608,6 @@
 				E0D23E3224AB744A00CD75B7 /* Device+Extension.swift in Sources */,
 				E034830F24C5952D003FFDAB /* SpinnerViewController.swift in Sources */,
 				E0436B3924C4709500B5EB81 /* InfoView.swift in Sources */,
-				E0D23E2C24AB5A4700CD75B7 /* RadialGradientButton.swift in Sources */,
 				E0436B3524C4695B00B5EB81 /* PaywallView.swift in Sources */,
 				E0D23E4424AC629000CD75B7 /* FilterTableViewCell.swift in Sources */,
 				E0D23E4624AC662900CD75B7 /* UIViewController+Blur.swift in Sources */,
@@ -629,7 +622,6 @@
 				E0D23E2E24AB5FC700CD75B7 /* HighlightedButton.swift in Sources */,
 				E00C62D924AB4454006D3B81 /* Request.swift in Sources */,
 				E00C62CB24AB3BA4006D3B81 /* ProfileViewController.swift in Sources */,
-				E0D23E3424AB94B800CD75B7 /* GradientView.swift in Sources */,
 				E0436B3D24C4BEB700B5EB81 /* UIView+Blur.swift in Sources */,
 				E00C62C924AB3B9D006D3B81 /* SearchViewController.swift in Sources */,
 				E0D781AF24BDE795007B920A /* Video.swift in Sources */,

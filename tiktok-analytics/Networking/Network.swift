@@ -22,7 +22,8 @@ class Network {
             
             switch response.result {
             case .success:
-                guard let json = try? JSONSerialization.jsonObject(with: response.data!, options: []) as? [String : Any],
+                guard let responseData = response.data,
+                    let json = try? JSONSerialization.jsonObject(with: responseData, options: []) as? [String : Any],
                     let dataJson = json["data"] as? [String: Any],
                     let dataUser = try? JSONSerialization.data(withJSONObject: dataJson, options: []),
                     let user = try? JSONDecoder().decode(Profile.self, from: dataUser) else {
@@ -45,7 +46,8 @@ class Network {
             let result: Result<[Video], StatusCodeError>
             switch response.result {
             case .success:
-                guard let json = try? JSONSerialization.jsonObject(with: response.data!, options: []) as? [String : Any],
+                guard let responseData = response.data,
+                let json = try? JSONSerialization.jsonObject(with: responseData, options: []) as? [String : Any],
                     let dataJson = json["data"] as? [Any],
                     let dataVideos = try? JSONSerialization.data(withJSONObject: dataJson, options: []),
                     let videos = try? JSONDecoder().decode([Video].self, from: dataVideos) else {
